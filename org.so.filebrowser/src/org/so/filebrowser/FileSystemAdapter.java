@@ -54,7 +54,7 @@ public class FileSystemAdapter extends ArrayAdapter<FileData> {
         textView.setText((CharSequence)item.name);
         
         if(item.directory) {
-        	imageView.setImageResource(R.drawable.folder);
+        	imageView.setImageResource(R.drawable.icon_folder);
         } else {
         	String fileExtention = getFileExtention(item.name);
         	Integer resource = mapExtentions.get(fileExtention);
@@ -62,7 +62,7 @@ public class FileSystemAdapter extends ArrayAdapter<FileData> {
         	if(resource != null) {
         		imageView.setImageResource(resource);
         	} else {
-        		imageView.setImageResource(R.drawable.file);
+        		imageView.setImageResource(R.drawable.icon_file);
         	}
         }
         
