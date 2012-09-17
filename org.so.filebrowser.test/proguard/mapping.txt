@@ -1,0 +1,44 @@
+de.so.filebrowser.MainActivity -> de.so.filebrowser.MainActivity:
+    void onCreate(android.os.Bundle) -> onCreate
+    boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+org.alliance.filebrowser.ArrayAdapter -> org.alliance.filebrowser.a:
+    java.util.List mObjects -> a
+    java.lang.Object mLock -> b
+    int mResource -> c
+    int mDropDownResource -> d
+    int mFieldId -> e
+    boolean mNotifyOnChange -> f
+    java.util.ArrayList mOriginalValues -> g
+    org.alliance.filebrowser.ArrayAdapter$ArrayFilter mFilter -> h
+    android.view.LayoutInflater mInflater -> i
+    void addAll(java.util.Collection) -> a
+    void clear() -> a
+    void notifyDataSetChanged() -> notifyDataSetChanged
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+    android.view.View createViewFromResource(int,android.view.View,android.view.ViewGroup,int) -> a
+    android.view.View getDropDownView(int,android.view.View,android.view.ViewGroup) -> getDropDownView
+    android.widget.Filter getFilter() -> getFilter
+    java.util.ArrayList access$0(org.alliance.filebrowser.ArrayAdapter) -> a
+    java.lang.Object access$1(org.alliance.filebrowser.ArrayAdapter) -> b
+    java.util.List access$2(org.alliance.filebrowser.ArrayAdapter) -> c
+    void access$3(org.alliance.filebrowser.ArrayAdapter,java.util.ArrayList) -> a
+    void access$4(org.alliance.filebrowser.ArrayAdapter,java.util.List) -> a
+org.alliance.filebrowser.ArrayAdapter$ArrayFilter -> org.alliance.filebrowser.b:
+    org.alliance.filebrowser.ArrayAdapter this$0 -> a
+    android.widget.Filter$FilterResults performFiltering(java.lang.CharSequence) -> performFiltering
+    void publishResults(java.lang.CharSequence,android.widget.Filter$FilterResults) -> publishResults
+org.alliance.filebrowser.FileList -> org.alliance.filebrowser.FileList:
+    org.alliance.filebrowser.FileSystemAdapter adapter -> a
+    org.alliance.filebrowser.FileSystemAdapter access$0(org.alliance.filebrowser.FileList) -> a
+org.alliance.filebrowser.FileList$1 -> org.alliance.filebrowser.c:
+    org.alliance.filebrowser.FileList this$0 -> a
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+org.alliance.filebrowser.FileSystemAdapter -> org.alliance.filebrowser.d:
+    java.lang.String root -> a
+    java.util.List paths -> b
+    java.io.File path -> c
+    void showFileSystem() -> b
+    java.io.File move(java.lang.String) -> a
