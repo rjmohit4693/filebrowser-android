@@ -1,0 +1,1891 @@
+_____________________________________________________________________
+- Program class: de/oros/filebrowser/MainActivity
+  Superclass:    android/app/Activity
+  Major version: 0x31
+  Minor version: 0x0
+  Access flags:  0x21
+    = public class de.so.filebrowser.MainActivity extends android.app.Activity
+
+Interfaces (count = 0):
+
+Constant Pool (count = 32):
+  - Integer [2130903040]
+  - Integer [2131099648]
+  - Class [android/app/Activity]
+  - Class [android/view/MenuInflater]
+  - Class [de/oros/filebrowser/MainActivity]
+  - Methodref [android/app/Activity.<init> ()V]
+  - Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
+  - Methodref [android/view/MenuInflater.inflate (ILandroid/view/Menu;)V]
+  - Methodref [de/oros/filebrowser/MainActivity.getMenuInflater ()Landroid/view/MenuInflater;]
+  - Methodref [de/oros/filebrowser/MainActivity.setContentView (I)V]
+  - NameAndType [<init> ()V]
+  - NameAndType [getMenuInflater ()Landroid/view/MenuInflater;]
+  - NameAndType [inflate (ILandroid/view/Menu;)V]
+  - NameAndType [onCreate (Landroid/os/Bundle;)V]
+  - NameAndType [setContentView (I)V]
+  - Utf8 [()Landroid/view/MenuInflater;]
+  - Utf8 [()V]
+  - Utf8 [(I)V]
+  - Utf8 [(ILandroid/view/Menu;)V]
+  - Utf8 [(Landroid/os/Bundle;)V]
+  - Utf8 [(Landroid/view/Menu;)Z]
+  - Utf8 [<init>]
+  - Utf8 [Code]
+  - Utf8 [android/app/Activity]
+  - Utf8 [android/view/MenuInflater]
+  - Utf8 [de/oros/filebrowser/MainActivity]
+  - Utf8 [getMenuInflater]
+  - Utf8 [inflate]
+  - Utf8 [onCreate]
+  - Utf8 [onCreateOptionsMenu]
+  - Utf8 [setContentView]
+
+Fields (count = 0):
+
+Methods (count = 3):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public MainActivity()
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #6
+        - Methodref [android/app/Activity.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       onCreate(Landroid/os/Bundle;)V
+    Access flags: 0x1
+      = public void onCreate(android.os.Bundle)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 12, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] invokespecial #7
+        - Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
+      [5] aload_0 v0
+      [6] ldc #1
+        - Integer [2130903040]
+      [8] invokevirtual #10
+        - Methodref [de/oros/filebrowser/MainActivity.setContentView (I)V]
+      [11] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       onCreateOptionsMenu(Landroid/view/Menu;)Z
+    Access flags: 0x1
+      = public boolean onCreateOptionsMenu(android.view.Menu)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 12, locals = 2, stack = 3):
+      [0] aload_0 v0
+      [1] invokevirtual #9
+        - Methodref [de/oros/filebrowser/MainActivity.getMenuInflater ()Landroid/view/MenuInflater;]
+      [4] ldc #2
+        - Integer [2131099648]
+      [6] aload_1 v1
+      [7] invokevirtual #8
+        - Methodref [android/view/MenuInflater.inflate (ILandroid/view/Menu;)V]
+      [10] iconst_1
+      [11] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
+- Program class: org/alliance/filebrowser/a
+  Superclass:    android/widget/BaseAdapter
+  Major version: 0x31
+  Minor version: 0x0
+  Access flags:  0x21
+    = public class org.alliance.filebrowser.a extends android.widget.BaseAdapter
+
+Interfaces (count = 1):
+  - Class [android/widget/Filterable]
+
+Constant Pool (count = 150):
+  - String [ArrayAdapter]
+  - String [ArrayAdapter requires the resource ID to be a TextView]
+  - String [You must supply a resource ID for a TextView]
+  - String [layout_inflater]
+  - Class [android/content/Context]
+  - Class [android/util/Log]
+  - Class [android/view/LayoutInflater]
+  - Class [android/view/View]
+  - Class [android/widget/BaseAdapter]
+  - Class [android/widget/Filterable]
+  - Class [android/widget/TextView]
+  - Class [java/lang/CharSequence]
+  - Class [java/lang/ClassCastException]
+  - Class [java/lang/IllegalStateException]
+  - Class [java/lang/Object]
+  - Class [java/util/ArrayList]
+  - Class [java/util/List]
+  - Class [org/alliance/filebrowser/a]
+  - Class [org/alliance/filebrowser/b]
+  - Fieldref [org/alliance/filebrowser/a.a Ljava/util/List;]
+  - Fieldref [org/alliance/filebrowser/a.b Ljava/lang/Object;]
+  - Fieldref [org/alliance/filebrowser/a.c I]
+  - Fieldref [org/alliance/filebrowser/a.d I]
+  - Fieldref [org/alliance/filebrowser/a.e I]
+  - Fieldref [org/alliance/filebrowser/a.f Z]
+  - Fieldref [org/alliance/filebrowser/a.g Ljava/util/ArrayList;]
+  - Fieldref [org/alliance/filebrowser/a.h Lorg/alliance/filebrowser/b;]
+  - Fieldref [org/alliance/filebrowser/a.i Landroid/view/LayoutInflater;]
+  - Methodref [android/content/Context.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+  - Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;)I]
+  - Methodref [android/view/LayoutInflater.inflate (ILandroid/view/ViewGroup;Z)Landroid/view/View;]
+  - Methodref [android/view/View.findViewById (I)Landroid/view/View;]
+  - Methodref [android/widget/BaseAdapter.<init> ()V]
+  - Methodref [android/widget/BaseAdapter.notifyDataSetChanged ()V]
+  - Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
+  - Methodref [java/lang/IllegalStateException.<init> (Ljava/lang/String;Ljava/lang/Throwable;)V]
+  - Methodref [java/lang/Object.<init> ()V]
+  - Methodref [java/lang/Object.toString ()Ljava/lang/String;]
+  - Methodref [java/util/ArrayList.addAll (Ljava/util/Collection;)Z]
+  - Methodref [java/util/ArrayList.clear ()V]
+  - Methodref [org/alliance/filebrowser/a.a (ILandroid/view/View;Landroid/view/ViewGroup;I)Landroid/view/View;]
+  - Methodref [org/alliance/filebrowser/a.getItem (I)Ljava/lang/Object;]
+  - Methodref [org/alliance/filebrowser/a.notifyDataSetChanged ()V]
+  - Methodref [org/alliance/filebrowser/b.<init> (Lorg/alliance/filebrowser/a;B)V]
+  - InterfaceMethodref [java/util/List.addAll (Ljava/util/Collection;)Z]
+  - InterfaceMethodref [java/util/List.clear ()V]
+  - InterfaceMethodref [java/util/List.get (I)Ljava/lang/Object;]
+  - InterfaceMethodref [java/util/List.size ()I]
+  - NameAndType [<init> ()V]
+  - NameAndType [<init> (Ljava/lang/String;Ljava/lang/Throwable;)V]
+  - NameAndType [<init> (Lorg/alliance/filebrowser/a;B)V]
+  - NameAndType [a (ILandroid/view/View;Landroid/view/ViewGroup;I)Landroid/view/View;]
+  - NameAndType [a Ljava/util/List;]
+  - NameAndType [addAll (Ljava/util/Collection;)Z]
+  - NameAndType [b Ljava/lang/Object;]
+  - NameAndType [c I]
+  - NameAndType [clear ()V]
+  - NameAndType [d I]
+  - NameAndType [e (Ljava/lang/String;Ljava/lang/String;)I]
+  - NameAndType [e I]
+  - NameAndType [f Z]
+  - NameAndType [findViewById (I)Landroid/view/View;]
+  - NameAndType [g Ljava/util/ArrayList;]
+  - NameAndType [get (I)Ljava/lang/Object;]
+  - NameAndType [getItem (I)Ljava/lang/Object;]
+  - NameAndType [getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+  - NameAndType [h Lorg/alliance/filebrowser/b;]
+  - NameAndType [i Landroid/view/LayoutInflater;]
+  - NameAndType [inflate (ILandroid/view/ViewGroup;Z)Landroid/view/View;]
+  - NameAndType [notifyDataSetChanged ()V]
+  - NameAndType [setText (Ljava/lang/CharSequence;)V]
+  - NameAndType [size ()I]
+  - NameAndType [toString ()Ljava/lang/String;]
+  - Utf8 [()I]
+  - Utf8 [()Landroid/widget/Filter;]
+  - Utf8 [()Ljava/lang/String;]
+  - Utf8 [()V]
+  - Utf8 [(I)J]
+  - Utf8 [(I)Landroid/view/View;]
+  - Utf8 [(I)Ljava/lang/Object;]
+  - Utf8 [(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;]
+  - Utf8 [(ILandroid/view/View;Landroid/view/ViewGroup;I)Landroid/view/View;]
+  - Utf8 [(ILandroid/view/ViewGroup;Z)Landroid/view/View;]
+  - Utf8 [(Landroid/content/Context;ILjava/util/List;)V]
+  - Utf8 [(Ljava/lang/CharSequence;)V]
+  - Utf8 [(Ljava/lang/String;)Ljava/lang/Object;]
+  - Utf8 [(Ljava/lang/String;Ljava/lang/String;)I]
+  - Utf8 [(Ljava/lang/String;Ljava/lang/Throwable;)V]
+  - Utf8 [(Ljava/util/Collection;)V]
+  - Utf8 [(Ljava/util/Collection;)Z]
+  - Utf8 [(Lorg/alliance/filebrowser/a;)Ljava/lang/Object;]
+  - Utf8 [(Lorg/alliance/filebrowser/a;)Ljava/util/ArrayList;]
+  - Utf8 [(Lorg/alliance/filebrowser/a;)Ljava/util/List;]
+  - Utf8 [(Lorg/alliance/filebrowser/a;B)V]
+  - Utf8 [(Lorg/alliance/filebrowser/a;Ljava/util/ArrayList;)V]
+  - Utf8 [(Lorg/alliance/filebrowser/a;Ljava/util/List;)V]
+  - Utf8 [<init>]
+  - Utf8 [ArrayAdapter]
+  - Utf8 [ArrayAdapter requires the resource ID to be a TextView]
+  - Utf8 [Code]
+  - Utf8 [I]
+  - Utf8 [Landroid/view/LayoutInflater;]
+  - Utf8 [Ljava/lang/Object;]
+  - Utf8 [Ljava/util/ArrayList;]
+  - Utf8 [Ljava/util/List;]
+  - Utf8 [Lorg/alliance/filebrowser/b;]
+  - Utf8 [You must supply a resource ID for a TextView]
+  - Utf8 [Z]
+  - Utf8 [a]
+  - Utf8 [addAll]
+  - Utf8 [android/content/Context]
+  - Utf8 [android/util/Log]
+  - Utf8 [android/view/LayoutInflater]
+  - Utf8 [android/view/View]
+  - Utf8 [android/widget/BaseAdapter]
+  - Utf8 [android/widget/Filterable]
+  - Utf8 [android/widget/TextView]
+  - Utf8 [b]
+  - Utf8 [c]
+  - Utf8 [clear]
+  - Utf8 [d]
+  - Utf8 [e]
+  - Utf8 [f]
+  - Utf8 [findViewById]
+  - Utf8 [g]
+  - Utf8 [get]
+  - Utf8 [getCount]
+  - Utf8 [getDropDownView]
+  - Utf8 [getFilter]
+  - Utf8 [getItem]
+  - Utf8 [getItemId]
+  - Utf8 [getSystemService]
+  - Utf8 [getView]
+  - Utf8 [h]
+  - Utf8 [i]
+  - Utf8 [inflate]
+  - Utf8 [java/lang/CharSequence]
+  - Utf8 [java/lang/ClassCastException]
+  - Utf8 [java/lang/IllegalStateException]
+  - Utf8 [java/lang/Object]
+  - Utf8 [java/util/ArrayList]
+  - Utf8 [java/util/List]
+  - Utf8 [layout_inflater]
+  - Utf8 [notifyDataSetChanged]
+  - Utf8 [org/alliance/filebrowser/a]
+  - Utf8 [org/alliance/filebrowser/b]
+  - Utf8 [setText]
+  - Utf8 [size]
+  - Utf8 [toString]
+
+Fields (count = 9):
+  - Field:        a Ljava/util/List;
+    Access flags: 0x2
+      = private java.util.List a
+  - Field:        b Ljava/lang/Object;
+    Access flags: 0x12
+      = private final java.lang.Object b
+  - Field:        c I
+    Access flags: 0x2
+      = private int c
+  - Field:        d I
+    Access flags: 0x2
+      = private int d
+  - Field:        e I
+    Access flags: 0x2
+      = private int e
+  - Field:        f Z
+    Access flags: 0x2
+      = private boolean f
+  - Field:        g Ljava/util/ArrayList;
+    Access flags: 0x2
+      = private java.util.ArrayList g
+  - Field:        h Lorg/alliance/filebrowser/b;
+    Access flags: 0x2
+      = private org.alliance.filebrowser.b h
+  - Field:        i Landroid/view/LayoutInflater;
+    Access flags: 0x2
+      = private android.view.LayoutInflater i
+
+Methods (count = 16):
+  - Method:       <init>(Landroid/content/Context;ILjava/util/List;)V
+    Access flags: 0x1
+      = public a(android.content.Context,int,java.util.List)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 71, locals = 5, stack = 5):
+      [0] aload_0 v0
+      [1] invokespecial #33
+        - Methodref [android/widget/BaseAdapter.<init> ()V]
+      [4] aload_0 v0
+      [5] new #15
+        - Class [java/lang/Object]
+      [8] dup
+      [9] invokespecial #37
+        - Methodref [java/lang/Object.<init> ()V]
+      [12] putfield #21
+        - Fieldref [org/alliance/filebrowser/a.b Ljava/lang/Object;]
+      [15] aload_0 v0
+      [16] iconst_0
+      [17] putfield #24
+        - Fieldref [org/alliance/filebrowser/a.e I]
+      [20] aload_0 v0
+      [21] iconst_1
+      [22] putfield #25
+        - Fieldref [org/alliance/filebrowser/a.f Z]
+      [25] aload_0 v0
+      [26] aload_1 v1
+      [27] iload_2 v2
+      [28] iconst_0
+      [29] aload_3 v3
+      [30] astore v4
+      [32] istore_1 v1
+      [33] istore_3 v3
+      [34] astore_2 v2
+      [35] dup
+      [36] astore_1 v1
+      [37] aload_2 v2
+      [38] ldc #4
+        - String [layout_inflater]
+      [40] invokevirtual #29
+        - Methodref [android/content/Context.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+      [43] checkcast #7
+        - Class [android/view/LayoutInflater]
+      [46] putfield #28
+        - Fieldref [org/alliance/filebrowser/a.i Landroid/view/LayoutInflater;]
+      [49] aload_1 v1
+      [50] aload_1 v1
+      [51] iload_3 v3
+      [52] dup_x1
+      [53] putfield #23
+        - Fieldref [org/alliance/filebrowser/a.d I]
+      [56] putfield #22
+        - Fieldref [org/alliance/filebrowser/a.c I]
+      [59] aload_1 v1
+      [60] aload v4
+      [62] putfield #20
+        - Fieldref [org/alliance/filebrowser/a.a Ljava/util/List;]
+      [65] aload_1 v1
+      [66] iconst_0
+      [67] putfield #24
+        - Fieldref [org/alliance/filebrowser/a.e I]
+      [70] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       a(Ljava/util/Collection;)V
+    Access flags: 0x11
+      = public final void a(java.util.Collection)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 57, locals = 3, stack = 2):
+      [0] aload_0 v0
+      [1] getfield #21
+        - Fieldref [org/alliance/filebrowser/a.b Ljava/lang/Object;]
+      [4] dup
+      [5] astore_2 v2
+      [6] monitorenter
+      [7] aload_0 v0
+      [8] getfield #26
+        - Fieldref [org/alliance/filebrowser/a.g Ljava/util/ArrayList;]
+      [11] ifnull +15 (target=26)
+      [14] aload_0 v0
+      [15] getfield #26
+        - Fieldref [org/alliance/filebrowser/a.g Ljava/util/ArrayList;]
+      [18] aload_1 v1
+      [19] invokevirtual #39
+        - Methodref [java/util/ArrayList.addAll (Ljava/util/Collection;)Z]
+      [22] pop
+      [23] goto +14 (target=37)
+      [26] aload_0 v0
+      [27] getfield #20
+        - Fieldref [org/alliance/filebrowser/a.a Ljava/util/List;]
+      [30] aload_1 v1
+      [31] invokeinterface #45
+        - InterfaceMethodref [java/util/List.addAll (Ljava/util/Collection;)Z]
+      [36] pop
+      [37] aload_2 v2
+      [38] monitorexit
+      [39] goto +6 (target=45)
+      [42] aload_2 v2
+      [43] monitorexit
+      [44] athrow
+      [45] aload_0 v0
+      [46] getfield #25
+        - Fieldref [org/alliance/filebrowser/a.f Z]
+      [49] ifeq +7 (target=56)
+      [52] aload_0 v0
+      [53] invokevirtual #43
+        - Methodref [org/alliance/filebrowser/a.notifyDataSetChanged ()V]
+      [56] return
+      Code attribute exceptions (count = 1):
+      - ExceptionInfo (7 -> 39: 42):
+      Code attribute attributes (attribute count = 0):
+  - Method:       a()V
+    Access flags: 0x11
+      = public final void a()
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 53, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] getfield #21
+        - Fieldref [org/alliance/filebrowser/a.b Ljava/lang/Object;]
+      [4] dup
+      [5] astore_1 v1
+      [6] monitorenter
+      [7] aload_0 v0
+      [8] getfield #26
+        - Fieldref [org/alliance/filebrowser/a.g Ljava/util/ArrayList;]
+      [11] ifnull +13 (target=24)
+      [14] aload_0 v0
+      [15] getfield #26
+        - Fieldref [org/alliance/filebrowser/a.g Ljava/util/ArrayList;]
+      [18] invokevirtual #40
+        - Methodref [java/util/ArrayList.clear ()V]
+      [21] goto +12 (target=33)
+      [24] aload_0 v0
+      [25] getfield #20
+        - Fieldref [org/alliance/filebrowser/a.a Ljava/util/List;]
+      [28] invokeinterface #46
+        - InterfaceMethodref [java/util/List.clear ()V]
+      [33] aload_1 v1
+      [34] monitorexit
+      [35] goto +6 (target=41)
+      [38] aload_1 v1
+      [39] monitorexit
+      [40] athrow
+      [41] aload_0 v0
+      [42] getfield #25
+        - Fieldref [org/alliance/filebrowser/a.f Z]
+      [45] ifeq +7 (target=52)
+      [48] aload_0 v0
+      [49] invokevirtual #43
+        - Methodref [org/alliance/filebrowser/a.notifyDataSetChanged ()V]
+      [52] return
+      Code attribute exceptions (count = 1):
+      - ExceptionInfo (7 -> 35: 38):
+      Code attribute attributes (attribute count = 0):
+  - Method:       notifyDataSetChanged()V
+    Access flags: 0x1
+      = public void notifyDataSetChanged()
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 10, locals = 1, stack = 2):
+      [0] aload_0 v0
+      [1] invokespecial #34
+        - Methodref [android/widget/BaseAdapter.notifyDataSetChanged ()V]
+      [4] aload_0 v0
+      [5] iconst_1
+      [6] putfield #25
+        - Fieldref [org/alliance/filebrowser/a.f Z]
+      [9] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       getCount()I
+    Access flags: 0x1
+      = public int getCount()
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 10, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] getfield #20
+        - Fieldref [org/alliance/filebrowser/a.a Ljava/util/List;]
+      [4] invokeinterface #48
+        - InterfaceMethodref [java/util/List.size ()I]
+      [9] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       getItem(I)Ljava/lang/Object;
+    Access flags: 0x1
+      = public java.lang.Object getItem(int)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 11, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] getfield #20
+        - Fieldref [org/alliance/filebrowser/a.a Ljava/util/List;]
+      [4] iload_1 v1
+      [5] invokeinterface #47
+        - InterfaceMethodref [java/util/List.get (I)Ljava/lang/Object;]
+      [10] areturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       getItemId(I)J
+    Access flags: 0x1
+      = public long getItemId(int)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 3, locals = 2, stack = 2):
+      [0] iload_1 v1
+      [1] i2l
+      [2] lreturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    Access flags: 0x1
+      = public android.view.View getView(int,android.view.View,android.view.ViewGroup)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 12, locals = 4, stack = 5):
+      [0] aload_0 v0
+      [1] iload_1 v1
+      [2] aload_2 v2
+      [3] aload_3 v3
+      [4] aload_0 v0
+      [5] getfield #22
+        - Fieldref [org/alliance/filebrowser/a.c I]
+      [8] invokespecial #41
+        - Methodref [org/alliance/filebrowser/a.a (ILandroid/view/View;Landroid/view/ViewGroup;I)Landroid/view/View;]
+      [11] areturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       a(ILandroid/view/View;Landroid/view/ViewGroup;I)Landroid/view/View;
+    Access flags: 0x2
+      = private android.view.View a(int,android.view.View,android.view.ViewGroup,int)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 105, locals = 5, stack = 4):
+      [0] aload_2 v2
+      [1] ifnonnull +18 (target=19)
+      [4] aload_0 v0
+      [5] getfield #28
+        - Fieldref [org/alliance/filebrowser/a.i Landroid/view/LayoutInflater;]
+      [8] iload v4
+      [10] aload_3 v3
+      [11] iconst_0
+      [12] invokevirtual #31
+        - Methodref [android/view/LayoutInflater.inflate (ILandroid/view/ViewGroup;Z)Landroid/view/View;]
+      [15] astore_2 v2
+      [16] goto +5 (target=21)
+      [19] aload_2 v2
+      [20] astore_2 v2
+      [21] aload_0 v0
+      [22] getfield #24
+        - Fieldref [org/alliance/filebrowser/a.e I]
+      [25] ifne +11 (target=36)
+      [28] aload_2 v2
+      [29] checkcast #11
+        - Class [android/widget/TextView]
+      [32] astore_3 v3
+      [33] goto +38 (target=71)
+      [36] aload_2 v2
+      [37] aload_0 v0
+      [38] getfield #24
+        - Fieldref [org/alliance/filebrowser/a.e I]
+      [41] invokevirtual #32
+        - Methodref [android/view/View.findViewById (I)Landroid/view/View;]
+      [44] checkcast #11
+        - Class [android/widget/TextView]
+      [47] astore_3 v3
+      [48] goto +23 (target=71)
+      [51] astore_1 v1
+      [52] ldc #1
+        - String [ArrayAdapter]
+      [54] ldc #3
+        - String [You must supply a resource ID for a TextView]
+      [56] invokestatic #30
+        - Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;)I]
+      [59] pop
+      [60] new #14
+        - Class [java/lang/IllegalStateException]
+      [63] dup
+      [64] ldc #2
+        - String [ArrayAdapter requires the resource ID to be a TextView]
+      [66] aload_1 v1
+      [67] invokespecial #36
+        - Methodref [java/lang/IllegalStateException.<init> (Ljava/lang/String;Ljava/lang/Throwable;)V]
+      [70] athrow
+      [71] aload_0 v0
+      [72] iload_1 v1
+      [73] invokevirtual #42
+        - Methodref [org/alliance/filebrowser/a.getItem (I)Ljava/lang/Object;]
+      [76] dup
+      [77] astore_1 v1
+      [78] instanceof #12
+        - Class [java/lang/CharSequence]
+      [81] ifeq +14 (target=95)
+      [84] aload_3 v3
+      [85] aload_1 v1
+      [86] checkcast #12
+        - Class [java/lang/CharSequence]
+      [89] invokevirtual #35
+        - Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
+      [92] goto +11 (target=103)
+      [95] aload_3 v3
+      [96] aload_1 v1
+      [97] invokevirtual #38
+        - Methodref [java/lang/Object.toString ()Ljava/lang/String;]
+      [100] invokevirtual #35
+        - Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
+      [103] aload_2 v2
+      [104] areturn
+      Code attribute exceptions (count = 1):
+      - ExceptionInfo (21 -> 48: 51):
+      - Class [java/lang/ClassCastException]
+      Code attribute attributes (attribute count = 0):
+  - Method:       getDropDownView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    Access flags: 0x1
+      = public android.view.View getDropDownView(int,android.view.View,android.view.ViewGroup)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 12, locals = 4, stack = 5):
+      [0] aload_0 v0
+      [1] iload_1 v1
+      [2] aload_2 v2
+      [3] aload_3 v3
+      [4] aload_0 v0
+      [5] getfield #23
+        - Fieldref [org/alliance/filebrowser/a.d I]
+      [8] invokespecial #41
+        - Methodref [org/alliance/filebrowser/a.a (ILandroid/view/View;Landroid/view/ViewGroup;I)Landroid/view/View;]
+      [11] areturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       getFilter()Landroid/widget/Filter;
+    Access flags: 0x1
+      = public android.widget.Filter getFilter()
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 25, locals = 1, stack = 5):
+      [0] aload_0 v0
+      [1] getfield #27
+        - Fieldref [org/alliance/filebrowser/a.h Lorg/alliance/filebrowser/b;]
+      [4] ifnonnull +16 (target=20)
+      [7] aload_0 v0
+      [8] new #19
+        - Class [org/alliance/filebrowser/b]
+      [11] dup
+      [12] aload_0 v0
+      [13] iconst_0
+      [14] invokespecial #44
+        - Methodref [org/alliance/filebrowser/b.<init> (Lorg/alliance/filebrowser/a;B)V]
+      [17] putfield #27
+        - Fieldref [org/alliance/filebrowser/a.h Lorg/alliance/filebrowser/b;]
+      [20] aload_0 v0
+      [21] getfield #27
+        - Fieldref [org/alliance/filebrowser/a.h Lorg/alliance/filebrowser/b;]
+      [24] areturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       a(Lorg/alliance/filebrowser/a;)Ljava/util/ArrayList;
+    Access flags: 0x1008
+      = static synthetic java.util.ArrayList a(org.alliance.filebrowser.a)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] getfield #26
+        - Fieldref [org/alliance/filebrowser/a.g Ljava/util/ArrayList;]
+      [4] areturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       b(Lorg/alliance/filebrowser/a;)Ljava/lang/Object;
+    Access flags: 0x1008
+      = static synthetic java.lang.Object b(org.alliance.filebrowser.a)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] getfield #21
+        - Fieldref [org/alliance/filebrowser/a.b Ljava/lang/Object;]
+      [4] areturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       c(Lorg/alliance/filebrowser/a;)Ljava/util/List;
+    Access flags: 0x1008
+      = static synthetic java.util.List c(org.alliance.filebrowser.a)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] getfield #20
+        - Fieldref [org/alliance/filebrowser/a.a Ljava/util/List;]
+      [4] areturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       a(Lorg/alliance/filebrowser/a;Ljava/util/ArrayList;)V
+    Access flags: 0x1008
+      = static synthetic void a(org.alliance.filebrowser.a,java.util.ArrayList)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 6, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] putfield #26
+        - Fieldref [org/alliance/filebrowser/a.g Ljava/util/ArrayList;]
+      [5] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       a(Lorg/alliance/filebrowser/a;Ljava/util/List;)V
+    Access flags: 0x1008
+      = static synthetic void a(org.alliance.filebrowser.a,java.util.List)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 6, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] putfield #20
+        - Fieldref [org/alliance/filebrowser/a.a Ljava/util/List;]
+      [5] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
+- Program class: org/alliance/filebrowser/b
+  Superclass:    android/widget/Filter
+  Major version: 0x31
+  Minor version: 0x0
+  Access flags:  0x30
+    = final class org.alliance.filebrowser.b extends android.widget.Filter
+
+Interfaces (count = 0):
+
+Constant Pool (count = 105):
+  - String [ ]
+  - Class [android/widget/Filter]
+  - Class [android/widget/Filter$FilterResults]
+  - Class [java/lang/CharSequence]
+  - Class [java/lang/Object]
+  - Class [java/lang/String]
+  - Class [java/util/ArrayList]
+  - Class [java/util/List]
+  - Class [org/alliance/filebrowser/a]
+  - Class [org/alliance/filebrowser/b]
+  - Fieldref [android/widget/Filter$FilterResults.count I]
+  - Fieldref [android/widget/Filter$FilterResults.values Ljava/lang/Object;]
+  - Fieldref [org/alliance/filebrowser/b.a Lorg/alliance/filebrowser/a;]
+  - Methodref [android/widget/Filter.<init> ()V]
+  - Methodref [android/widget/Filter$FilterResults.<init> ()V]
+  - Methodref [java/lang/Object.toString ()Ljava/lang/String;]
+  - Methodref [java/lang/String.split (Ljava/lang/String;)[Ljava/lang/String;]
+  - Methodref [java/lang/String.startsWith (Ljava/lang/String;)Z]
+  - Methodref [java/lang/String.toLowerCase ()Ljava/lang/String;]
+  - Methodref [java/util/ArrayList.<init> ()V]
+  - Methodref [java/util/ArrayList.<init> (Ljava/util/Collection;)V]
+  - Methodref [java/util/ArrayList.add (Ljava/lang/Object;)Z]
+  - Methodref [java/util/ArrayList.get (I)Ljava/lang/Object;]
+  - Methodref [java/util/ArrayList.size ()I]
+  - Methodref [org/alliance/filebrowser/a.a (Lorg/alliance/filebrowser/a;)Ljava/util/ArrayList;]
+  - Methodref [org/alliance/filebrowser/a.a (Lorg/alliance/filebrowser/a;Ljava/util/ArrayList;)V]
+  - Methodref [org/alliance/filebrowser/a.a (Lorg/alliance/filebrowser/a;Ljava/util/List;)V]
+  - Methodref [org/alliance/filebrowser/a.b (Lorg/alliance/filebrowser/a;)Ljava/lang/Object;]
+  - Methodref [org/alliance/filebrowser/a.c (Lorg/alliance/filebrowser/a;)Ljava/util/List;]
+  - Methodref [org/alliance/filebrowser/a.notifyDataSetChanged ()V]
+  - Methodref [org/alliance/filebrowser/a.notifyDataSetInvalidated ()V]
+  - Methodref [org/alliance/filebrowser/b.<init> (Lorg/alliance/filebrowser/a;)V]
+  - InterfaceMethodref [java/lang/CharSequence.length ()I]
+  - InterfaceMethodref [java/lang/CharSequence.toString ()Ljava/lang/String;]
+  - NameAndType [<init> ()V]
+  - NameAndType [<init> (Ljava/util/Collection;)V]
+  - NameAndType [<init> (Lorg/alliance/filebrowser/a;)V]
+  - NameAndType [a (Lorg/alliance/filebrowser/a;)Ljava/util/ArrayList;]
+  - NameAndType [a (Lorg/alliance/filebrowser/a;Ljava/util/ArrayList;)V]
+  - NameAndType [a (Lorg/alliance/filebrowser/a;Ljava/util/List;)V]
+  - NameAndType [a Lorg/alliance/filebrowser/a;]
+  - NameAndType [add (Ljava/lang/Object;)Z]
+  - NameAndType [b (Lorg/alliance/filebrowser/a;)Ljava/lang/Object;]
+  - NameAndType [c (Lorg/alliance/filebrowser/a;)Ljava/util/List;]
+  - NameAndType [count I]
+  - NameAndType [get (I)Ljava/lang/Object;]
+  - NameAndType [length ()I]
+  - NameAndType [notifyDataSetChanged ()V]
+  - NameAndType [notifyDataSetInvalidated ()V]
+  - NameAndType [size ()I]
+  - NameAndType [split (Ljava/lang/String;)[Ljava/lang/String;]
+  - NameAndType [startsWith (Ljava/lang/String;)Z]
+  - NameAndType [toLowerCase ()Ljava/lang/String;]
+  - NameAndType [toString ()Ljava/lang/String;]
+  - NameAndType [values Ljava/lang/Object;]
+  - Utf8 [ ]
+  - Utf8 [()I]
+  - Utf8 [()Ljava/lang/String;]
+  - Utf8 [()V]
+  - Utf8 [(I)Ljava/lang/Object;]
+  - Utf8 [(Ljava/lang/CharSequence;)Landroid/widget/Filter$FilterResults;]
+  - Utf8 [(Ljava/lang/CharSequence;Landroid/widget/Filter$FilterResults;)V]
+  - Utf8 [(Ljava/lang/Object;)Z]
+  - Utf8 [(Ljava/lang/String;)Z]
+  - Utf8 [(Ljava/lang/String;)[Ljava/lang/String;]
+  - Utf8 [(Ljava/util/Collection;)V]
+  - Utf8 [(Lorg/alliance/filebrowser/a;)Ljava/lang/Object;]
+  - Utf8 [(Lorg/alliance/filebrowser/a;)Ljava/util/ArrayList;]
+  - Utf8 [(Lorg/alliance/filebrowser/a;)Ljava/util/List;]
+  - Utf8 [(Lorg/alliance/filebrowser/a;)V]
+  - Utf8 [(Lorg/alliance/filebrowser/a;B)V]
+  - Utf8 [(Lorg/alliance/filebrowser/a;Ljava/util/ArrayList;)V]
+  - Utf8 [(Lorg/alliance/filebrowser/a;Ljava/util/List;)V]
+  - Utf8 [<init>]
+  - Utf8 [Code]
+  - Utf8 [I]
+  - Utf8 [Ljava/lang/Object;]
+  - Utf8 [Lorg/alliance/filebrowser/a;]
+  - Utf8 [a]
+  - Utf8 [add]
+  - Utf8 [android/widget/Filter]
+  - Utf8 [android/widget/Filter$FilterResults]
+  - Utf8 [b]
+  - Utf8 [c]
+  - Utf8 [count]
+  - Utf8 [get]
+  - Utf8 [java/lang/CharSequence]
+  - Utf8 [java/lang/Object]
+  - Utf8 [java/lang/String]
+  - Utf8 [java/util/ArrayList]
+  - Utf8 [java/util/List]
+  - Utf8 [length]
+  - Utf8 [notifyDataSetChanged]
+  - Utf8 [notifyDataSetInvalidated]
+  - Utf8 [org/alliance/filebrowser/a]
+  - Utf8 [org/alliance/filebrowser/b]
+  - Utf8 [performFiltering]
+  - Utf8 [publishResults]
+  - Utf8 [size]
+  - Utf8 [split]
+  - Utf8 [startsWith]
+  - Utf8 [toLowerCase]
+  - Utf8 [toString]
+  - Utf8 [values]
+
+Fields (count = 1):
+  - Field:        a Lorg/alliance/filebrowser/a;
+    Access flags: 0x1002
+      = private synthetic org.alliance.filebrowser.a a
+
+Methods (count = 4):
+  - Method:       <init>(Lorg/alliance/filebrowser/a;)V
+    Access flags: 0x2
+      = private b(org.alliance.filebrowser.a)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 10, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] putfield #13
+        - Fieldref [org/alliance/filebrowser/b.a Lorg/alliance/filebrowser/a;]
+      [5] aload_0 v0
+      [6] invokespecial #14
+        - Methodref [android/widget/Filter.<init> ()V]
+      [9] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       performFiltering(Ljava/lang/CharSequence;)Landroid/widget/Filter$FilterResults;
+    Access flags: 0x14
+      = protected final android.widget.Filter$FilterResults performFiltering(java.lang.CharSequence)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 301, locals = 11, stack = 4):
+      [0] new #3
+        - Class [android/widget/Filter$FilterResults]
+      [3] dup
+      [4] invokespecial #15
+        - Methodref [android/widget/Filter$FilterResults.<init> ()V]
+      [7] astore_2 v2
+      [8] aload_0 v0
+      [9] getfield #13
+        - Fieldref [org/alliance/filebrowser/b.a Lorg/alliance/filebrowser/a;]
+      [12] invokestatic #25
+        - Methodref [org/alliance/filebrowser/a.a (Lorg/alliance/filebrowser/a;)Ljava/util/ArrayList;]
+      [15] ifnonnull +42 (target=57)
+      [18] aload_0 v0
+      [19] getfield #13
+        - Fieldref [org/alliance/filebrowser/b.a Lorg/alliance/filebrowser/a;]
+      [22] invokestatic #28
+        - Methodref [org/alliance/filebrowser/a.b (Lorg/alliance/filebrowser/a;)Ljava/lang/Object;]
+      [25] dup
+      [26] astore_3 v3
+      [27] monitorenter
+      [28] aload_0 v0
+      [29] getfield #13
+        - Fieldref [org/alliance/filebrowser/b.a Lorg/alliance/filebrowser/a;]
+      [32] new #7
+        - Class [java/util/ArrayList]
+      [35] dup
+      [36] aload_0 v0
+      [37] getfield #13
+        - Fieldref [org/alliance/filebrowser/b.a Lorg/alliance/filebrowser/a;]
+      [40] invokestatic #29
+        - Methodref [org/alliance/filebrowser/a.c (Lorg/alliance/filebrowser/a;)Ljava/util/List;]
+      [43] invokespecial #21
+        - Methodref [java/util/ArrayList.<init> (Ljava/util/Collection;)V]
+      [46] invokestatic #26
+        - Methodref [org/alliance/filebrowser/a.a (Lorg/alliance/filebrowser/a;Ljava/util/ArrayList;)V]
+      [49] aload_3 v3
+      [50] monitorexit
+      [51] goto +6 (target=57)
+      [54] aload_3 v3
+      [55] monitorexit
+      [56] athrow
+      [57] aload_1 v1
+      [58] ifnull +12 (target=70)
+      [61] aload_1 v1
+      [62] invokeinterface #33
+        - InterfaceMethodref [java/lang/CharSequence.length ()I]
+      [67] ifne +52 (target=119)
+      [70] aload_0 v0
+      [71] getfield #13
+        - Fieldref [org/alliance/filebrowser/b.a Lorg/alliance/filebrowser/a;]
+      [74] invokestatic #28
+        - Methodref [org/alliance/filebrowser/a.b (Lorg/alliance/filebrowser/a;)Ljava/lang/Object;]
+      [77] dup
+      [78] astore_1 v1
+      [79] monitorenter
+      [80] new #7
+        - Class [java/util/ArrayList]
+      [83] dup
+      [84] aload_0 v0
+      [85] getfield #13
+        - Fieldref [org/alliance/filebrowser/b.a Lorg/alliance/filebrowser/a;]
+      [88] invokestatic #25
+        - Methodref [org/alliance/filebrowser/a.a (Lorg/alliance/filebrowser/a;)Ljava/util/ArrayList;]
+      [91] invokespecial #21
+        - Methodref [java/util/ArrayList.<init> (Ljava/util/Collection;)V]
+      [94] astore_3 v3
+      [95] aload_1 v1
+      [96] monitorexit
+      [97] goto +6 (target=103)
+      [100] aload_1 v1
+      [101] monitorexit
+      [102] athrow
+      [103] aload_2 v2
+      [104] aload_3 v3
+      [105] putfield #12
+        - Fieldref [android/widget/Filter$FilterResults.values Ljava/lang/Object;]
+      [108] aload_2 v2
+      [109] aload_3 v3
+      [110] invokevirtual #24
+        - Methodref [java/util/ArrayList.size ()I]
+      [113] putfield #11
+        - Fieldref [android/widget/Filter$FilterResults.count I]
+      [116] goto +183 (target=299)
+      [119] aload_1 v1
+      [120] invokeinterface #34
+        - InterfaceMethodref [java/lang/CharSequence.toString ()Ljava/lang/String;]
+      [125] invokevirtual #19
+        - Methodref [java/lang/String.toLowerCase ()Ljava/lang/String;]
+      [128] astore_3 v3
+      [129] aload_0 v0
+      [130] getfield #13
+        - Fieldref [org/alliance/filebrowser/b.a Lorg/alliance/filebrowser/a;]
+      [133] invokestatic #28
+        - Methodref [org/alliance/filebrowser/a.b (Lorg/alliance/filebrowser/a;)Ljava/lang/Object;]
+      [136] dup
+      [137] astore v4
+      [139] monitorenter
+      [140] new #7
+        - Class [java/util/ArrayList]
+      [143] dup
+      [144] aload_0 v0
+      [145] getfield #13
+        - Fieldref [org/alliance/filebrowser/b.a Lorg/alliance/filebrowser/a;]
+      [148] invokestatic #25
+        - Methodref [org/alliance/filebrowser/a.a (Lorg/alliance/filebrowser/a;)Ljava/util/ArrayList;]
+      [151] invokespecial #21
+        - Methodref [java/util/ArrayList.<init> (Ljava/util/Collection;)V]
+      [154] astore_1 v1
+      [155] aload v4
+      [157] monitorexit
+      [158] goto +7 (target=165)
+      [161] aload v4
+      [163] monitorexit
+      [164] athrow
+      [165] aload_1 v1
+      [166] invokevirtual #24
+        - Methodref [java/util/ArrayList.size ()I]
+      [169] istore v4
+      [171] new #7
+        - Class [java/util/ArrayList]
+      [174] dup
+      [175] invokespecial #20
+        - Methodref [java/util/ArrayList.<init> ()V]
+      [178] astore v5
+      [180] iconst_0
+      [181] istore v6
+      [183] goto +94 (target=277)
+      [186] aload_1 v1
+      [187] iload v6
+      [189] invokevirtual #23
+        - Methodref [java/util/ArrayList.get (I)Ljava/lang/Object;]
+      [192] dup
+      [193] astore v7
+      [195] invokevirtual #16
+        - Methodref [java/lang/Object.toString ()Ljava/lang/String;]
+      [198] invokevirtual #19
+        - Methodref [java/lang/String.toLowerCase ()Ljava/lang/String;]
+      [201] dup
+      [202] astore v8
+      [204] aload_3 v3
+      [205] invokevirtual #18
+        - Methodref [java/lang/String.startsWith (Ljava/lang/String;)Z]
+      [208] ifeq +14 (target=222)
+      [211] aload v5
+      [213] aload v7
+      [215] invokevirtual #22
+        - Methodref [java/util/ArrayList.add (Ljava/lang/Object;)Z]
+      [218] pop
+      [219] goto +55 (target=274)
+      [222] aload v8
+      [224] ldc #1
+        - String [ ]
+      [226] invokevirtual #17
+        - Methodref [java/lang/String.split (Ljava/lang/String;)[Ljava/lang/String;]
+      [229] dup
+      [230] astore v8
+      [232] arraylength
+      [233] istore v9
+      [235] iconst_0
+      [236] istore v10
+      [238] goto +29 (target=267)
+      [241] aload v8
+      [243] iload v10
+      [245] aaload
+      [246] aload_3 v3
+      [247] invokevirtual #18
+        - Methodref [java/lang/String.startsWith (Ljava/lang/String;)Z]
+      [250] ifeq +14 (target=264)
+      [253] aload v5
+      [255] aload v7
+      [257] invokevirtual #22
+        - Methodref [java/util/ArrayList.add (Ljava/lang/Object;)Z]
+      [260] pop
+      [261] goto +13 (target=274)
+      [264] iinc v10, 1
+      [267] iload v10
+      [269] iload v9
+      [271] ificmplt -30 (target=241)
+      [274] iinc v6, 1
+      [277] iload v6
+      [279] iload v4
+      [281] ificmplt -95 (target=186)
+      [284] aload_2 v2
+      [285] aload v5
+      [287] putfield #12
+        - Fieldref [android/widget/Filter$FilterResults.values Ljava/lang/Object;]
+      [290] aload_2 v2
+      [291] aload v5
+      [293] invokevirtual #24
+        - Methodref [java/util/ArrayList.size ()I]
+      [296] putfield #11
+        - Fieldref [android/widget/Filter$FilterResults.count I]
+      [299] aload_2 v2
+      [300] areturn
+      Code attribute exceptions (count = 3):
+      - ExceptionInfo (28 -> 51: 54):
+      - ExceptionInfo (80 -> 97: 100):
+      - ExceptionInfo (140 -> 158: 161):
+      Code attribute attributes (attribute count = 0):
+  - Method:       publishResults(Ljava/lang/CharSequence;Landroid/widget/Filter$FilterResults;)V
+    Access flags: 0x14
+      = protected final void publishResults(java.lang.CharSequence,android.widget.Filter$FilterResults)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 37, locals = 3, stack = 2):
+      [0] aload_0 v0
+      [1] getfield #13
+        - Fieldref [org/alliance/filebrowser/b.a Lorg/alliance/filebrowser/a;]
+      [4] aload_2 v2
+      [5] getfield #12
+        - Fieldref [android/widget/Filter$FilterResults.values Ljava/lang/Object;]
+      [8] checkcast #8
+        - Class [java/util/List]
+      [11] invokestatic #27
+        - Methodref [org/alliance/filebrowser/a.a (Lorg/alliance/filebrowser/a;Ljava/util/List;)V]
+      [14] aload_2 v2
+      [15] getfield #11
+        - Fieldref [android/widget/Filter$FilterResults.count I]
+      [18] ifle +11 (target=29)
+      [21] aload_0 v0
+      [22] getfield #13
+        - Fieldref [org/alliance/filebrowser/b.a Lorg/alliance/filebrowser/a;]
+      [25] invokevirtual #30
+        - Methodref [org/alliance/filebrowser/a.notifyDataSetChanged ()V]
+      [28] return
+      [29] aload_0 v0
+      [30] getfield #13
+        - Fieldref [org/alliance/filebrowser/b.a Lorg/alliance/filebrowser/a;]
+      [33] invokevirtual #31
+        - Methodref [org/alliance/filebrowser/a.notifyDataSetInvalidated ()V]
+      [36] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       <init>(Lorg/alliance/filebrowser/a;B)V
+    Access flags: 0x1000
+      = synthetic b(org.alliance.filebrowser.a,byte)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 6, locals = 3, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] invokespecial #32
+        - Methodref [org/alliance/filebrowser/b.<init> (Lorg/alliance/filebrowser/a;)V]
+      [5] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
+- Program class: org/alliance/filebrowser/FileList
+  Superclass:    android/widget/ListView
+  Major version: 0x31
+  Minor version: 0x0
+  Access flags:  0x21
+    = public class org.alliance.filebrowser.FileList extends android.widget.ListView
+
+Interfaces (count = 0):
+
+Constant Pool (count = 52):
+  - Integer [2130903041]
+  - String [hallo]
+  - String [test]
+  - Class [android/widget/ListView]
+  - Class [java/util/ArrayList]
+  - Class [java/util/List]
+  - Class [org/alliance/filebrowser/FileList]
+  - Class [org/alliance/filebrowser/c]
+  - Class [org/alliance/filebrowser/d]
+  - Fieldref [org/alliance/filebrowser/FileList.a Lorg/alliance/filebrowser/d;]
+  - Methodref [android/widget/ListView.<init> (Landroid/content/Context;Landroid/util/AttributeSet;)V]
+  - Methodref [java/util/ArrayList.<init> ()V]
+  - Methodref [org/alliance/filebrowser/FileList.setAdapter (Landroid/widget/ListAdapter;)V]
+  - Methodref [org/alliance/filebrowser/FileList.setOnItemClickListener (Landroid/widget/AdapterView$OnItemClickListener;)V]
+  - Methodref [org/alliance/filebrowser/c.<init> (Lorg/alliance/filebrowser/FileList;)V]
+  - Methodref [org/alliance/filebrowser/d.<init> (Landroid/content/Context;I)V]
+  - Methodref [org/alliance/filebrowser/d.b ()V]
+  - InterfaceMethodref [java/util/List.add (Ljava/lang/Object;)Z]
+  - NameAndType [<init> ()V]
+  - NameAndType [<init> (Landroid/content/Context;I)V]
+  - NameAndType [<init> (Landroid/content/Context;Landroid/util/AttributeSet;)V]
+  - NameAndType [<init> (Lorg/alliance/filebrowser/FileList;)V]
+  - NameAndType [a Lorg/alliance/filebrowser/d;]
+  - NameAndType [add (Ljava/lang/Object;)Z]
+  - NameAndType [b ()V]
+  - NameAndType [setAdapter (Landroid/widget/ListAdapter;)V]
+  - NameAndType [setOnItemClickListener (Landroid/widget/AdapterView$OnItemClickListener;)V]
+  - Utf8 [()V]
+  - Utf8 [(Landroid/content/Context;I)V]
+  - Utf8 [(Landroid/content/Context;Landroid/util/AttributeSet;)V]
+  - Utf8 [(Landroid/widget/AdapterView$OnItemClickListener;)V]
+  - Utf8 [(Landroid/widget/ListAdapter;)V]
+  - Utf8 [(Ljava/lang/Object;)Z]
+  - Utf8 [(Lorg/alliance/filebrowser/FileList;)Lorg/alliance/filebrowser/d;]
+  - Utf8 [(Lorg/alliance/filebrowser/FileList;)V]
+  - Utf8 [<init>]
+  - Utf8 [Code]
+  - Utf8 [Lorg/alliance/filebrowser/d;]
+  - Utf8 [a]
+  - Utf8 [add]
+  - Utf8 [android/widget/ListView]
+  - Utf8 [b]
+  - Utf8 [hallo]
+  - Utf8 [java/util/ArrayList]
+  - Utf8 [java/util/List]
+  - Utf8 [org/alliance/filebrowser/FileList]
+  - Utf8 [org/alliance/filebrowser/c]
+  - Utf8 [org/alliance/filebrowser/d]
+  - Utf8 [setAdapter]
+  - Utf8 [setOnItemClickListener]
+  - Utf8 [test]
+
+Fields (count = 1):
+  - Field:        a Lorg/alliance/filebrowser/d;
+    Access flags: 0x2
+      = private org.alliance.filebrowser.d a
+
+Methods (count = 2):
+  - Method:       <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    Access flags: 0x1
+      = public FileList(android.content.Context,android.util.AttributeSet)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 74, locals = 3, stack = 5):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] aload_2 v2
+      [3] invokespecial #11
+        - Methodref [android/widget/ListView.<init> (Landroid/content/Context;Landroid/util/AttributeSet;)V]
+      [6] new #5
+        - Class [java/util/ArrayList]
+      [9] dup
+      [10] invokespecial #12
+        - Methodref [java/util/ArrayList.<init> ()V]
+      [13] dup
+      [14] astore_2 v2
+      [15] ldc #2
+        - String [hallo]
+      [17] invokeinterface #18
+        - InterfaceMethodref [java/util/List.add (Ljava/lang/Object;)Z]
+      [22] pop
+      [23] aload_2 v2
+      [24] ldc #3
+        - String [test]
+      [26] invokeinterface #18
+        - InterfaceMethodref [java/util/List.add (Ljava/lang/Object;)Z]
+      [31] pop
+      [32] aload_0 v0
+      [33] new #9
+        - Class [org/alliance/filebrowser/d]
+      [36] dup
+      [37] aload_1 v1
+      [38] ldc #1
+        - Integer [2130903041]
+      [40] invokespecial #16
+        - Methodref [org/alliance/filebrowser/d.<init> (Landroid/content/Context;I)V]
+      [43] putfield #10
+        - Fieldref [org/alliance/filebrowser/FileList.a Lorg/alliance/filebrowser/d;]
+      [46] aload_0 v0
+      [47] getfield #10
+        - Fieldref [org/alliance/filebrowser/FileList.a Lorg/alliance/filebrowser/d;]
+      [50] invokevirtual #17
+        - Methodref [org/alliance/filebrowser/d.b ()V]
+      [53] aload_0 v0
+      [54] aload_0 v0
+      [55] getfield #10
+        - Fieldref [org/alliance/filebrowser/FileList.a Lorg/alliance/filebrowser/d;]
+      [58] invokevirtual #13
+        - Methodref [org/alliance/filebrowser/FileList.setAdapter (Landroid/widget/ListAdapter;)V]
+      [61] aload_0 v0
+      [62] new #8
+        - Class [org/alliance/filebrowser/c]
+      [65] dup
+      [66] aload_0 v0
+      [67] invokespecial #15
+        - Methodref [org/alliance/filebrowser/c.<init> (Lorg/alliance/filebrowser/FileList;)V]
+      [70] invokevirtual #14
+        - Methodref [org/alliance/filebrowser/FileList.setOnItemClickListener (Landroid/widget/AdapterView$OnItemClickListener;)V]
+      [73] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       a(Lorg/alliance/filebrowser/FileList;)Lorg/alliance/filebrowser/d;
+    Access flags: 0x1008
+      = static synthetic org.alliance.filebrowser.d a(org.alliance.filebrowser.FileList)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] getfield #10
+        - Fieldref [org/alliance/filebrowser/FileList.a Lorg/alliance/filebrowser/d;]
+      [4] areturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
+- Program class: org/alliance/filebrowser/c
+  Superclass:    java/lang/Object
+  Major version: 0x31
+  Minor version: 0x0
+  Access flags:  0x30
+    = final class org.alliance.filebrowser.c extends java.lang.Object
+
+Interfaces (count = 1):
+  - Class [android/widget/AdapterView$OnItemClickListener]
+
+Constant Pool (count = 92):
+  - String [OK]
+  - String [[]
+  - String []]
+  - String [] folder can't be read!]
+  - Class [android/app/AlertDialog$Builder]
+  - Class [android/widget/AdapterView$OnItemClickListener]
+  - Class [java/io/File]
+  - Class [java/lang/Object]
+  - Class [java/lang/String]
+  - Class [java/lang/StringBuilder]
+  - Class [org/alliance/filebrowser/FileList]
+  - Class [org/alliance/filebrowser/c]
+  - Class [org/alliance/filebrowser/d]
+  - Fieldref [org/alliance/filebrowser/c.a Lorg/alliance/filebrowser/FileList;]
+  - Methodref [android/app/AlertDialog$Builder.<init> (Landroid/content/Context;)V]
+  - Methodref [android/app/AlertDialog$Builder.setPositiveButton (Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
+  - Methodref [android/app/AlertDialog$Builder.setTitle (Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
+  - Methodref [android/app/AlertDialog$Builder.show ()Landroid/app/AlertDialog;]
+  - Methodref [java/io/File.canRead ()Z]
+  - Methodref [java/io/File.getName ()Ljava/lang/String;]
+  - Methodref [java/io/File.isDirectory ()Z]
+  - Methodref [java/lang/Object.<init> ()V]
+  - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+  - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+  - Methodref [org/alliance/filebrowser/FileList.a (Lorg/alliance/filebrowser/FileList;)Lorg/alliance/filebrowser/d;]
+  - Methodref [org/alliance/filebrowser/FileList.getContext ()Landroid/content/Context;]
+  - Methodref [org/alliance/filebrowser/d.a (Ljava/lang/String;)Ljava/io/File;]
+  - Methodref [org/alliance/filebrowser/d.b ()V]
+  - Methodref [org/alliance/filebrowser/d.getItem (I)Ljava/lang/Object;]
+  - NameAndType [<init> ()V]
+  - NameAndType [<init> (Landroid/content/Context;)V]
+  - NameAndType [<init> (Ljava/lang/String;)V]
+  - NameAndType [a (Ljava/lang/String;)Ljava/io/File;]
+  - NameAndType [a (Lorg/alliance/filebrowser/FileList;)Lorg/alliance/filebrowser/d;]
+  - NameAndType [a Lorg/alliance/filebrowser/FileList;]
+  - NameAndType [append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  - NameAndType [b ()V]
+  - NameAndType [canRead ()Z]
+  - NameAndType [getContext ()Landroid/content/Context;]
+  - NameAndType [getItem (I)Ljava/lang/Object;]
+  - NameAndType [getName ()Ljava/lang/String;]
+  - NameAndType [isDirectory ()Z]
+  - NameAndType [setPositiveButton (Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
+  - NameAndType [setTitle (Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
+  - NameAndType [show ()Landroid/app/AlertDialog;]
+  - NameAndType [toString ()Ljava/lang/String;]
+  - Utf8 [()Landroid/app/AlertDialog;]
+  - Utf8 [()Landroid/content/Context;]
+  - Utf8 [()Ljava/lang/String;]
+  - Utf8 [()V]
+  - Utf8 [()Z]
+  - Utf8 [(I)Ljava/lang/Object;]
+  - Utf8 [(Landroid/content/Context;)V]
+  - Utf8 [(Landroid/widget/AdapterView;Landroid/view/View;IJ)V]
+  - Utf8 [(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
+  - Utf8 [(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
+  - Utf8 [(Ljava/lang/String;)Ljava/io/File;]
+  - Utf8 [(Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  - Utf8 [(Ljava/lang/String;)V]
+  - Utf8 [(Lorg/alliance/filebrowser/FileList;)Lorg/alliance/filebrowser/d;]
+  - Utf8 [(Lorg/alliance/filebrowser/FileList;)V]
+  - Utf8 [<init>]
+  - Utf8 [Code]
+  - Utf8 [Lorg/alliance/filebrowser/FileList;]
+  - Utf8 [OK]
+  - Utf8 [[]
+  - Utf8 []]
+  - Utf8 [] folder can't be read!]
+  - Utf8 [a]
+  - Utf8 [android/app/AlertDialog$Builder]
+  - Utf8 [android/widget/AdapterView$OnItemClickListener]
+  - Utf8 [append]
+  - Utf8 [b]
+  - Utf8 [canRead]
+  - Utf8 [getContext]
+  - Utf8 [getItem]
+  - Utf8 [getName]
+  - Utf8 [isDirectory]
+  - Utf8 [java/io/File]
+  - Utf8 [java/lang/Object]
+  - Utf8 [java/lang/String]
+  - Utf8 [java/lang/StringBuilder]
+  - Utf8 [onItemClick]
+  - Utf8 [org/alliance/filebrowser/FileList]
+  - Utf8 [org/alliance/filebrowser/c]
+  - Utf8 [org/alliance/filebrowser/d]
+  - Utf8 [setPositiveButton]
+  - Utf8 [setTitle]
+  - Utf8 [show]
+  - Utf8 [toString]
+
+Fields (count = 1):
+  - Field:        a Lorg/alliance/filebrowser/FileList;
+    Access flags: 0x1002
+      = private synthetic org.alliance.filebrowser.FileList a
+
+Methods (count = 2):
+  - Method:       <init>(Lorg/alliance/filebrowser/FileList;)V
+    Access flags: 0x0
+      = c(org.alliance.filebrowser.FileList)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 10, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] putfield #14
+        - Fieldref [org/alliance/filebrowser/c.a Lorg/alliance/filebrowser/FileList;]
+      [5] aload_0 v0
+      [6] invokespecial #22
+        - Methodref [java/lang/Object.<init> ()V]
+      [9] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+    Access flags: 0x11
+      = public final void onItemClick(android.widget.AdapterView,android.view.View,int,long)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 156, locals = 6, stack = 4):
+      [0] aload_0 v0
+      [1] getfield #14
+        - Fieldref [org/alliance/filebrowser/c.a Lorg/alliance/filebrowser/FileList;]
+      [4] invokestatic #26
+        - Methodref [org/alliance/filebrowser/FileList.a (Lorg/alliance/filebrowser/FileList;)Lorg/alliance/filebrowser/d;]
+      [7] iload_3 v3
+      [8] invokevirtual #30
+        - Methodref [org/alliance/filebrowser/d.getItem (I)Ljava/lang/Object;]
+      [11] checkcast #9
+        - Class [java/lang/String]
+      [14] astore_1 v1
+      [15] aload_0 v0
+      [16] getfield #14
+        - Fieldref [org/alliance/filebrowser/c.a Lorg/alliance/filebrowser/FileList;]
+      [19] invokestatic #26
+        - Methodref [org/alliance/filebrowser/FileList.a (Lorg/alliance/filebrowser/FileList;)Lorg/alliance/filebrowser/d;]
+      [22] aload_1 v1
+      [23] invokevirtual #28
+        - Methodref [org/alliance/filebrowser/d.a (Ljava/lang/String;)Ljava/io/File;]
+      [26] dup
+      [27] astore_1 v1
+      [28] invokevirtual #21
+        - Methodref [java/io/File.isDirectory ()Z]
+      [31] ifeq +73 (target=104)
+      [34] aload_1 v1
+      [35] invokevirtual #19
+        - Methodref [java/io/File.canRead ()Z]
+      [38] ifeq +14 (target=52)
+      [41] aload_0 v0
+      [42] getfield #14
+        - Fieldref [org/alliance/filebrowser/c.a Lorg/alliance/filebrowser/FileList;]
+      [45] invokestatic #26
+        - Methodref [org/alliance/filebrowser/FileList.a (Lorg/alliance/filebrowser/FileList;)Lorg/alliance/filebrowser/d;]
+      [48] invokevirtual #29
+        - Methodref [org/alliance/filebrowser/d.b ()V]
+      [51] return
+      [52] new #5
+        - Class [android/app/AlertDialog$Builder]
+      [55] dup
+      [56] aload_0 v0
+      [57] getfield #14
+        - Fieldref [org/alliance/filebrowser/c.a Lorg/alliance/filebrowser/FileList;]
+      [60] invokevirtual #27
+        - Methodref [org/alliance/filebrowser/FileList.getContext ()Landroid/content/Context;]
+      [63] invokespecial #15
+        - Methodref [android/app/AlertDialog$Builder.<init> (Landroid/content/Context;)V]
+      [66] new #10
+        - Class [java/lang/StringBuilder]
+      [69] dup
+      [70] ldc #2
+        - String [[]
+      [72] invokespecial #23
+        - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [75] aload_1 v1
+      [76] invokevirtual #20
+        - Methodref [java/io/File.getName ()Ljava/lang/String;]
+      [79] invokevirtual #24
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [82] ldc #4
+        - String [] folder can't be read!]
+      [84] invokevirtual #24
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [87] invokevirtual #25
+        - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [90] invokevirtual #17
+        - Methodref [android/app/AlertDialog$Builder.setTitle (Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
+      [93] ldc #1
+        - String [OK]
+      [95] aconst_null
+      [96] invokevirtual #16
+        - Methodref [android/app/AlertDialog$Builder.setPositiveButton (Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
+      [99] invokevirtual #18
+        - Methodref [android/app/AlertDialog$Builder.show ()Landroid/app/AlertDialog;]
+      [102] pop
+      [103] return
+      [104] new #5
+        - Class [android/app/AlertDialog$Builder]
+      [107] dup
+      [108] aload_0 v0
+      [109] getfield #14
+        - Fieldref [org/alliance/filebrowser/c.a Lorg/alliance/filebrowser/FileList;]
+      [112] invokevirtual #27
+        - Methodref [org/alliance/filebrowser/FileList.getContext ()Landroid/content/Context;]
+      [115] invokespecial #15
+        - Methodref [android/app/AlertDialog$Builder.<init> (Landroid/content/Context;)V]
+      [118] new #10
+        - Class [java/lang/StringBuilder]
+      [121] dup
+      [122] ldc #2
+        - String [[]
+      [124] invokespecial #23
+        - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [127] aload_1 v1
+      [128] invokevirtual #20
+        - Methodref [java/io/File.getName ()Ljava/lang/String;]
+      [131] invokevirtual #24
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [134] ldc #3
+        - String []]
+      [136] invokevirtual #24
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [139] invokevirtual #25
+        - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [142] invokevirtual #17
+        - Methodref [android/app/AlertDialog$Builder.setTitle (Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
+      [145] ldc #1
+        - String [OK]
+      [147] aconst_null
+      [148] invokevirtual #16
+        - Methodref [android/app/AlertDialog$Builder.setPositiveButton (Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
+      [151] invokevirtual #18
+        - Methodref [android/app/AlertDialog$Builder.show ()Landroid/app/AlertDialog;]
+      [154] pop
+      [155] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
+- Program class: org/alliance/filebrowser/d
+  Superclass:    org/alliance/filebrowser/a
+  Major version: 0x31
+  Minor version: 0x0
+  Access flags:  0x31
+    = public final class org.alliance.filebrowser.d extends org.alliance.filebrowser.a
+
+Interfaces (count = 0):
+
+Constant Pool (count = 123):
+  - String [../]
+  - String [/]
+  - Class [android/os/Environment]
+  - Class [java/io/File]
+  - Class [java/lang/String]
+  - Class [java/lang/StringBuilder]
+  - Class [java/util/ArrayList]
+  - Class [java/util/Iterator]
+  - Class [java/util/List]
+  - Class [org/alliance/filebrowser/a]
+  - Class [org/alliance/filebrowser/d]
+  - Fieldref [org/alliance/filebrowser/d.a Ljava/lang/String;]
+  - Fieldref [org/alliance/filebrowser/d.b Ljava/util/List;]
+  - Fieldref [org/alliance/filebrowser/d.c Ljava/io/File;]
+  - Methodref [android/os/Environment.getExternalStorageDirectory ()Ljava/io/File;]
+  - Methodref [java/io/File.<init> (Ljava/lang/String;)V]
+  - Methodref [java/io/File.canRead ()Z]
+  - Methodref [java/io/File.getAbsolutePath ()Ljava/lang/String;]
+  - Methodref [java/io/File.getName ()Ljava/lang/String;]
+  - Methodref [java/io/File.getPath ()Ljava/lang/String;]
+  - Methodref [java/io/File.isDirectory ()Z]
+  - Methodref [java/io/File.isHidden ()Z]
+  - Methodref [java/io/File.listFiles ()[Ljava/io/File;]
+  - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+  - Methodref [java/lang/String.equalsIgnoreCase (Ljava/lang/String;)Z]
+  - Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
+  - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+  - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+  - Methodref [java/util/ArrayList.<init> ()V]
+  - Methodref [org/alliance/filebrowser/a.<init> (Landroid/content/Context;ILjava/util/List;)V]
+  - Methodref [org/alliance/filebrowser/d.a ()V]
+  - Methodref [org/alliance/filebrowser/d.a (Ljava/util/Collection;)V]
+  - InterfaceMethodref [java/util/Iterator.hasNext ()Z]
+  - InterfaceMethodref [java/util/Iterator.next ()Ljava/lang/Object;]
+  - InterfaceMethodref [java/util/List.add (Ljava/lang/Object;)Z]
+  - InterfaceMethodref [java/util/List.iterator ()Ljava/util/Iterator;]
+  - InterfaceMethodref [java/util/List.remove (I)Ljava/lang/Object;]
+  - InterfaceMethodref [java/util/List.size ()I]
+  - NameAndType [<init> ()V]
+  - NameAndType [<init> (Landroid/content/Context;ILjava/util/List;)V]
+  - NameAndType [<init> (Ljava/lang/String;)V]
+  - NameAndType [a ()V]
+  - NameAndType [a (Ljava/util/Collection;)V]
+  - NameAndType [a Ljava/lang/String;]
+  - NameAndType [add (Ljava/lang/Object;)Z]
+  - NameAndType [append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  - NameAndType [b Ljava/util/List;]
+  - NameAndType [c Ljava/io/File;]
+  - NameAndType [canRead ()Z]
+  - NameAndType [equals (Ljava/lang/Object;)Z]
+  - NameAndType [equalsIgnoreCase (Ljava/lang/String;)Z]
+  - NameAndType [getAbsolutePath ()Ljava/lang/String;]
+  - NameAndType [getExternalStorageDirectory ()Ljava/io/File;]
+  - NameAndType [getName ()Ljava/lang/String;]
+  - NameAndType [getPath ()Ljava/lang/String;]
+  - NameAndType [hasNext ()Z]
+  - NameAndType [isDirectory ()Z]
+  - NameAndType [isHidden ()Z]
+  - NameAndType [iterator ()Ljava/util/Iterator;]
+  - NameAndType [listFiles ()[Ljava/io/File;]
+  - NameAndType [next ()Ljava/lang/Object;]
+  - NameAndType [remove (I)Ljava/lang/Object;]
+  - NameAndType [size ()I]
+  - NameAndType [toString ()Ljava/lang/String;]
+  - NameAndType [valueOf (Ljava/lang/Object;)Ljava/lang/String;]
+  - Utf8 [()I]
+  - Utf8 [()Ljava/io/File;]
+  - Utf8 [()Ljava/lang/Object;]
+  - Utf8 [()Ljava/lang/String;]
+  - Utf8 [()Ljava/util/Iterator;]
+  - Utf8 [()V]
+  - Utf8 [()Z]
+  - Utf8 [()[Ljava/io/File;]
+  - Utf8 [(I)Ljava/lang/Object;]
+  - Utf8 [(Landroid/content/Context;I)V]
+  - Utf8 [(Landroid/content/Context;ILjava/util/List;)V]
+  - Utf8 [(Ljava/lang/Object;)Ljava/lang/String;]
+  - Utf8 [(Ljava/lang/Object;)Z]
+  - Utf8 [(Ljava/lang/String;)Ljava/io/File;]
+  - Utf8 [(Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  - Utf8 [(Ljava/lang/String;)V]
+  - Utf8 [(Ljava/lang/String;)Z]
+  - Utf8 [(Ljava/util/Collection;)V]
+  - Utf8 [../]
+  - Utf8 [/]
+  - Utf8 [<init>]
+  - Utf8 [Code]
+  - Utf8 [Ljava/io/File;]
+  - Utf8 [Ljava/lang/String;]
+  - Utf8 [Ljava/util/List;]
+  - Utf8 [a]
+  - Utf8 [add]
+  - Utf8 [android/os/Environment]
+  - Utf8 [append]
+  - Utf8 [b]
+  - Utf8 [c]
+  - Utf8 [canRead]
+  - Utf8 [equals]
+  - Utf8 [equalsIgnoreCase]
+  - Utf8 [getAbsolutePath]
+  - Utf8 [getExternalStorageDirectory]
+  - Utf8 [getName]
+  - Utf8 [getPath]
+  - Utf8 [hasNext]
+  - Utf8 [isDirectory]
+  - Utf8 [isHidden]
+  - Utf8 [iterator]
+  - Utf8 [java/io/File]
+  - Utf8 [java/lang/String]
+  - Utf8 [java/lang/StringBuilder]
+  - Utf8 [java/util/ArrayList]
+  - Utf8 [java/util/Iterator]
+  - Utf8 [java/util/List]
+  - Utf8 [listFiles]
+  - Utf8 [next]
+  - Utf8 [org/alliance/filebrowser/a]
+  - Utf8 [org/alliance/filebrowser/d]
+  - Utf8 [remove]
+  - Utf8 [size]
+  - Utf8 [toString]
+  - Utf8 [valueOf]
+
+Fields (count = 3):
+  - Field:        a Ljava/lang/String;
+    Access flags: 0x2
+      = private java.lang.String a
+  - Field:        b Ljava/util/List;
+    Access flags: 0x2
+      = private java.util.List b
+  - Field:        c Ljava/io/File;
+    Access flags: 0x2
+      = private java.io.File c
+
+Methods (count = 3):
+  - Method:       <init>(Landroid/content/Context;I)V
+    Access flags: 0x1
+      = public d(android.content.Context,int)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 68, locals = 3, stack = 6):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] iload_2 v2
+      [3] new #7
+        - Class [java/util/ArrayList]
+      [6] dup
+      [7] invokespecial #30
+        - Methodref [java/util/ArrayList.<init> ()V]
+      [10] invokespecial #31
+        - Methodref [org/alliance/filebrowser/a.<init> (Landroid/content/Context;ILjava/util/List;)V]
+      [13] aload_0 v0
+      [14] new #7
+        - Class [java/util/ArrayList]
+      [17] dup
+      [18] invokespecial #30
+        - Methodref [java/util/ArrayList.<init> ()V]
+      [21] putfield #13
+        - Fieldref [org/alliance/filebrowser/d.b Ljava/util/List;]
+      [24] aload_0 v0
+      [25] invokestatic #15
+        - Methodref [android/os/Environment.getExternalStorageDirectory ()Ljava/io/File;]
+      [28] invokevirtual #20
+        - Methodref [java/io/File.getPath ()Ljava/lang/String;]
+      [31] putfield #12
+        - Fieldref [org/alliance/filebrowser/d.a Ljava/lang/String;]
+      [34] aload_0 v0
+      [35] new #4
+        - Class [java/io/File]
+      [38] dup
+      [39] new #6
+        - Class [java/lang/StringBuilder]
+      [42] dup
+      [43] aload_0 v0
+      [44] getfield #12
+        - Fieldref [org/alliance/filebrowser/d.a Ljava/lang/String;]
+      [47] invokestatic #26
+        - Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
+      [50] invokespecial #27
+        - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [53] ldc #2
+        - String [/]
+      [55] invokevirtual #28
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [58] invokevirtual #29
+        - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [61] invokespecial #16
+        - Methodref [java/io/File.<init> (Ljava/lang/String;)V]
+      [64] putfield #14
+        - Fieldref [org/alliance/filebrowser/d.c Ljava/io/File;]
+      [67] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       b()V
+    Access flags: 0x11
+      = public final void b()
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 139, locals = 5, stack = 4):
+      [0] new #7
+        - Class [java/util/ArrayList]
+      [3] dup
+      [4] invokespecial #30
+        - Methodref [java/util/ArrayList.<init> ()V]
+      [7] astore_1 v1
+      [8] aload_0 v0
+      [9] getfield #14
+        - Fieldref [org/alliance/filebrowser/d.c Ljava/io/File;]
+      [12] invokevirtual #23
+        - Methodref [java/io/File.listFiles ()[Ljava/io/File;]
+      [15] astore_2 v2
+      [16] aload_0 v0
+      [17] getfield #14
+        - Fieldref [org/alliance/filebrowser/d.c Ljava/io/File;]
+      [20] invokevirtual #18
+        - Methodref [java/io/File.getAbsolutePath ()Ljava/lang/String;]
+      [23] aload_0 v0
+      [24] getfield #12
+        - Fieldref [org/alliance/filebrowser/d.a Ljava/lang/String;]
+      [27] invokevirtual #24
+        - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+      [30] ifne +12 (target=42)
+      [33] aload_1 v1
+      [34] ldc #1
+        - String [../]
+      [36] invokeinterface #36
+        - InterfaceMethodref [java/util/List.add (Ljava/lang/Object;)Z]
+      [41] pop
+      [42] iconst_0
+      [43] istore_3 v3
+      [44] goto +79 (target=123)
+      [47] aload_2 v2
+      [48] iload_3 v3
+      [49] aaload
+      [50] dup
+      [51] astore v4
+      [53] invokevirtual #22
+        - Methodref [java/io/File.isHidden ()Z]
+      [56] ifne +64 (target=120)
+      [59] aload v4
+      [61] invokevirtual #17
+        - Methodref [java/io/File.canRead ()Z]
+      [64] ifeq +56 (target=120)
+      [67] aload v4
+      [69] invokevirtual #21
+        - Methodref [java/io/File.isDirectory ()Z]
+      [72] ifeq +36 (target=108)
+      [75] aload_1 v1
+      [76] new #6
+        - Class [java/lang/StringBuilder]
+      [79] dup
+      [80] aload v4
+      [82] invokevirtual #19
+        - Methodref [java/io/File.getName ()Ljava/lang/String;]
+      [85] invokestatic #26
+        - Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
+      [88] invokespecial #27
+        - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [91] ldc #2
+        - String [/]
+      [93] invokevirtual #28
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [96] invokevirtual #29
+        - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [99] invokeinterface #36
+        - InterfaceMethodref [java/util/List.add (Ljava/lang/Object;)Z]
+      [104] pop
+      [105] goto +15 (target=120)
+      [108] aload_1 v1
+      [109] aload v4
+      [111] invokevirtual #19
+        - Methodref [java/io/File.getName ()Ljava/lang/String;]
+      [114] invokeinterface #36
+        - InterfaceMethodref [java/util/List.add (Ljava/lang/Object;)Z]
+      [119] pop
+      [120] iinc v3, 1
+      [123] iload_3 v3
+      [124] aload_2 v2
+      [125] arraylength
+      [126] ificmplt -79 (target=47)
+      [129] aload_0 v0
+      [130] invokevirtual #32
+        - Methodref [org/alliance/filebrowser/d.a ()V]
+      [133] aload_0 v0
+      [134] aload_1 v1
+      [135] invokevirtual #33
+        - Methodref [org/alliance/filebrowser/d.a (Ljava/util/Collection;)V]
+      [138] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       a(Ljava/lang/String;)Ljava/io/File;
+    Access flags: 0x11
+      = public final java.io.File a(java.lang.String)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 165, locals = 4, stack = 3):
+      [0] aload_1 v1
+      [1] ldc #1
+        - String [../]
+      [3] invokevirtual #25
+        - Methodref [java/lang/String.equalsIgnoreCase (Ljava/lang/String;)Z]
+      [6] ifeq +27 (target=33)
+      [9] aload_0 v0
+      [10] getfield #13
+        - Fieldref [org/alliance/filebrowser/d.b Ljava/util/List;]
+      [13] aload_0 v0
+      [14] getfield #13
+        - Fieldref [org/alliance/filebrowser/d.b Ljava/util/List;]
+      [17] invokeinterface #39
+        - InterfaceMethodref [java/util/List.size ()I]
+      [22] iconst_1
+      [23] isub
+      [24] invokeinterface #38
+        - InterfaceMethodref [java/util/List.remove (I)Ljava/lang/Object;]
+      [29] pop
+      [30] goto +14 (target=44)
+      [33] aload_0 v0
+      [34] getfield #13
+        - Fieldref [org/alliance/filebrowser/d.b Ljava/util/List;]
+      [37] aload_1 v1
+      [38] invokeinterface #36
+        - InterfaceMethodref [java/util/List.add (Ljava/lang/Object;)Z]
+      [43] pop
+      [44] new #6
+        - Class [java/lang/StringBuilder]
+      [47] dup
+      [48] aload_0 v0
+      [49] getfield #12
+        - Fieldref [org/alliance/filebrowser/d.a Ljava/lang/String;]
+      [52] invokestatic #26
+        - Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
+      [55] invokespecial #27
+        - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [58] ldc #2
+        - String [/]
+      [60] invokevirtual #28
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [63] invokevirtual #29
+        - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [66] astore_1 v1
+      [67] aload_0 v0
+      [68] getfield #13
+        - Fieldref [org/alliance/filebrowser/d.b Ljava/util/List;]
+      [71] invokeinterface #37
+        - InterfaceMethodref [java/util/List.iterator ()Ljava/util/Iterator;]
+      [76] astore_3 v3
+      [77] goto +32 (target=109)
+      [80] aload_3 v3
+      [81] invokeinterface #35
+        - InterfaceMethodref [java/util/Iterator.next ()Ljava/lang/Object;]
+      [86] checkcast #5
+        - Class [java/lang/String]
+      [89] astore_2 v2
+      [90] new #6
+        - Class [java/lang/StringBuilder]
+      [93] dup
+      [94] aload_1 v1
+      [95] invokestatic #26
+        - Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
+      [98] invokespecial #27
+        - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [101] aload_2 v2
+      [102] invokevirtual #28
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [105] invokevirtual #29
+        - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [108] astore_1 v1
+      [109] aload_3 v3
+      [110] invokeinterface #34
+        - InterfaceMethodref [java/util/Iterator.hasNext ()Z]
+      [115] ifne -35 (target=80)
+      [118] new #4
+        - Class [java/io/File]
+      [121] dup
+      [122] aload_1 v1
+      [123] invokespecial #16
+        - Methodref [java/io/File.<init> (Ljava/lang/String;)V]
+      [126] dup
+      [127] astore_2 v2
+      [128] invokevirtual #21
+        - Methodref [java/io/File.isDirectory ()Z]
+      [131] ifeq +11 (target=142)
+      [134] aload_0 v0
+      [135] aload_2 v2
+      [136] putfield #14
+        - Fieldref [org/alliance/filebrowser/d.c Ljava/io/File;]
+      [139] goto +24 (target=163)
+      [142] aload_0 v0
+      [143] getfield #13
+        - Fieldref [org/alliance/filebrowser/d.b Ljava/util/List;]
+      [146] aload_0 v0
+      [147] getfield #13
+        - Fieldref [org/alliance/filebrowser/d.b Ljava/util/List;]
+      [150] invokeinterface #39
+        - InterfaceMethodref [java/util/List.size ()I]
+      [155] iconst_1
+      [156] isub
+      [157] invokeinterface #38
+        - InterfaceMethodref [java/util/List.remove (I)Ljava/lang/Object;]
+      [162] pop
+      [163] aload_2 v2
+      [164] areturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
