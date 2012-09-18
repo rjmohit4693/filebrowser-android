@@ -10,6 +10,7 @@ import org.so.filebrowser.FileListView;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.StrictMode;
 import android.view.Menu;
 import android.widget.EditText;
@@ -43,7 +44,8 @@ public class MainActivity extends Activity {
 		EditText editTextFile = (EditText) findViewById(R.id.editTextFile);
 		fileList.setEditTextFile(editTextFile);
 
-		fileList.init();
+		File externalFilesDir = getExternalFilesDir(null);
+		fileList.init(null);
 	}
 
 	@Override
