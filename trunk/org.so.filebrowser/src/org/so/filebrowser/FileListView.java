@@ -6,6 +6,7 @@ import java.io.File;
 import org.so.filebrowser.R;
 
 import android.content.Context;
+import android.os.Environment;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.AdapterView;
@@ -30,7 +31,14 @@ public class FileListView extends ListView implements AdapterView.OnItemClickLis
 		setOnItemClickListener(this);
 	}
 	
-	public void init() {
+	public void init(File path) {
+		
+		if(path != null) {
+			adapter.setPath(path);
+		} else {
+			adapter.setPath(Environment.getExternalStorageDirectory());
+		}
+		
 		if(!adapter.hasExtentions()) {
 			setDefaultFileExtentions();
 		}

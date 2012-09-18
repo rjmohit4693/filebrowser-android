@@ -21,6 +21,7 @@ public class FileSystemAdapter extends ArrayAdapter<FileData> {
 	private String root;
 	private List<String> paths = new ArrayList<String>();
 	private File path;
+	private File file;
 	private Map<String, Integer> mapExtentions = new HashMap<String, Integer>();
 	
 	public FileSystemAdapter(Context context, int textViewResourceId) {
@@ -122,26 +123,23 @@ public class FileSystemAdapter extends ArrayAdapter<FileData> {
 	 * 2. "foldername/" -> to this folder <br>
 	 * 3. "file.dat" -> don't move
 	 * @param pathSuffix suffix to the path like "images/"
-	 * @return returns the next folder or the same in case of a file
+	 * @return returns the file of the next step
 	 */
 	public File move(String pathSuffix) {
 		if(pathSuffix.equalsIgnoreCase("../")) {
-			paths.remove(paths.size()-1);
+			if(path.isDirectory()) {
+				path = path.getParentFile();
+			} else {
+				path = path.getParentFile().getParentFile();
+			}
 		} else {
-			paths.add(pathSuffix);
+			File newPath = new File(path, pathSuffix);
+			if(newPath.canRead()) {
+				path = newPath;
+			}
 		}
-		String filePath = root + "/";
-		for(String p : paths) {
-			filePath += p;
-		}
-		
-		File file = new File(filePath);
-		if(file.isDirectory()) {
-			path = file;
-		} else {
-			paths.remove(paths.size()-1);
-		}
-		return file;
+				
+		return path;
 	}
 	
 	/**
@@ -163,5 +161,9 @@ public class FileSystemAdapter extends ArrayAdapter<FileData> {
 	
 	public File getPath() {
 		return path;
+	}
+	
+	public void setPath(File path) {
+		this.path = path;
 	}
 }
