@@ -1,6 +1,6 @@
-# view AndroidManifest.xml #generated:17
+# view AndroidManifest.xml #generated:18
 -keep class de.so.filebrowser.MainActivity { <init>(...); }
 
 # view res/layout/activity_main.xml #generated:28
--keep class org.alliance.filebrowser.FileListView { <init>(...); }
+-keep class org.so.filebrowser.FileListView { <init>(...); }
 
