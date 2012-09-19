@@ -26,6 +26,7 @@ public class FileSystemAdapter extends ArrayAdapter<FileData> {
 	
 	public FileSystemAdapter(Context context, int textViewResourceId) {
 		super(context, textViewResourceId, new ArrayList<FileData>());
+		//   /mnt/sdcard
 		root = Environment.getExternalStorageDirectory().getPath();
 		path = new File(root + "/");
 	}
@@ -133,10 +134,18 @@ public class FileSystemAdapter extends ArrayAdapter<FileData> {
 				path = path.getParentFile().getParentFile();
 			}
 		} else {
-			File newPath = new File(path, pathSuffix);
-			if(newPath.canRead()) {
-				path = newPath;
+			if(path.isDirectory()) {
+				File newPath = new File(path, pathSuffix);
+				if(newPath.canRead()) {
+					path = newPath;
+				}
+			} else {
+				File newPath = new File(path.getParentFile(), pathSuffix);
+				if(newPath.canRead()) {
+					path = newPath;
+				}
 			}
+			
 		}
 				
 		return path;

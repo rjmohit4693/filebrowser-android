@@ -14,6 +14,14 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
+/**
+ * TODO: folders on top, sorting, filtering, set root, ...<br>
+ * 
+ * root: /mnt/sdcard
+ * 
+ * @author work
+ *
+ */
 public class FileListView extends ListView implements AdapterView.OnItemClickListener {
 
 	private FileSystemAdapter adapter;
