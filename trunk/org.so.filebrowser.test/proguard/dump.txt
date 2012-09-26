@@ -4,7 +4,7 @@ _____________________________________________________________________
   Major version: 0x31
   Minor version: 0x0
   Access flags:  0x21
-    = public class de.so.filebrowser.MainActivity extends android.app.Activity
+    = public class de.so.filebrowser.FilebrowserActivity extends android.app.Activity
 
 Interfaces (count = 0):
 

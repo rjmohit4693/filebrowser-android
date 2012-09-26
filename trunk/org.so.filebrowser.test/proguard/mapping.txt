@@ -1,4 +1,4 @@
-de.so.filebrowser.MainActivity -> de.so.filebrowser.MainActivity:
+de.so.filebrowser.FilebrowserActivity -> de.so.filebrowser.FilebrowserActivity:
     void onCreate(android.os.Bundle) -> onCreate
     boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
 org.alliance.filebrowser.ArrayAdapter -> org.alliance.filebrowser.a:

@@ -1,4 +1,4 @@
-de.so.filebrowser.MainActivity
-de.so.filebrowser.MainActivity: MainActivity()
+de.so.filebrowser.FilebrowserActivity
+de.so.filebrowser.FilebrowserActivity: MainActivity()
 org.alliance.filebrowser.FileList
 org.alliance.filebrowser.FileList: FileList(android.content.Context,android.util.AttributeSet)
