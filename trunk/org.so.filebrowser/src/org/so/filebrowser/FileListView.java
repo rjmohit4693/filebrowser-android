@@ -3,7 +3,9 @@ package org.so.filebrowser;
 
 import java.io.File;
 
-import org.so.filebrowser.R;
+import org.so.filebrowser.comparator.ComparatorChain;
+import org.so.filebrowser.comparator.DirectoryFileComparator;
+import org.so.filebrowser.comparator.NameComparator;
 
 import android.content.Context;
 import android.os.Environment;
@@ -17,9 +19,11 @@ import android.widget.TextView;
 /**
  * TODO: folders on top, sorting, filtering, set root, ...<br>
  * 
+ * Supports multiple Comparators by a ComparatorChain see getComparator(). <br>
+ * 
  * root: /mnt/sdcard
  * 
- * @author work
+ * @author strangeoptics
  *
  */
 public class FileListView extends ListView implements AdapterView.OnItemClickListener {
@@ -29,12 +33,17 @@ public class FileListView extends ListView implements AdapterView.OnItemClickLis
 	private TextView textViewDirectory;
 	private TextView textViewFile;
 	private EditText editTextFile;
+	private ComparatorChain<FileData> comparator;
 	
 	public FileListView(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		
 		adapter = new FileSystemAdapter(context, R.layout.filemanager_row_icon);
 		setAdapter(adapter);
+		
+		comparator = new ComparatorChain<FileData>();
+		comparator.addComparator(new DirectoryFileComparator());
+		comparator.addComparator(new NameComparator());
 		
 		setOnItemClickListener(this);
 	}
@@ -72,6 +81,9 @@ public class FileListView extends ListView implements AdapterView.OnItemClickLis
 		if (file.isDirectory()) {
 			if (file.canRead()) {
 				adapter.showFileSystem();
+				if(comparator != null) {
+					adapter.sort(comparator);
+				}
 			} 
 		}		
 		updateUI(file);
@@ -131,6 +143,22 @@ public class FileListView extends ListView implements AdapterView.OnItemClickLis
          */
         void onDirectoryOrFileClick(File file);
     }
+
+    /**
+     * Gives back a ComparatorChain that is preset with the following two Comparators: <br>
+     * 1) DirectoryFileComparator <br>
+     * 2) NameComparator <br><br>
+     * To use different Comparators just call comparator.clear() and comparator.addComparator(yourcomparator)
+     * 
+     * @return
+     */
+	public ComparatorChain<FileData> getComparator() {
+		return comparator;
+	}
+
+	public void setComparator(ComparatorChain<FileData> comparator) {
+		this.comparator = comparator;
+	}
 	
 }
 

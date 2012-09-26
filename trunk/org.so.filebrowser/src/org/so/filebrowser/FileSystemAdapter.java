@@ -16,6 +16,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+/**
+ * 
+ * @author strangeoptics
+ *
+ */
 public class FileSystemAdapter extends ArrayAdapter<FileData> {
 
 	private String root;
@@ -119,12 +124,9 @@ public class FileSystemAdapter extends ArrayAdapter<FileData> {
 	}
 	
 	/**
-	 * Moves the Adapter to the next folder: <br>
-	 * 1. "../" -> one folder back <br>
-	 * 2. "foldername/" -> to this folder <br>
-	 * 3. "file.dat" -> don't move
+	 * Moves the Adapter to the next folder/file: <br>
 	 * @param pathSuffix suffix to the path like "images/"
-	 * @return returns the file of the next step
+	 * @return returns the actual position
 	 */
 	public File move(String pathSuffix) {
 		if(pathSuffix.equalsIgnoreCase("../")) {
@@ -145,7 +147,6 @@ public class FileSystemAdapter extends ArrayAdapter<FileData> {
 					path = newPath;
 				}
 			}
-			
 		}
 				
 		return path;
