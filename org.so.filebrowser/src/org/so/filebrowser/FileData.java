@@ -1,5 +1,10 @@
 package org.so.filebrowser;
 
+/**
+ * 
+ * @author strangeoptics
+ *
+ */
 public class FileData {
 	
 	public String name;
