@@ -48,6 +48,16 @@ public class FileListView extends ListView implements AdapterView.OnItemClickLis
 		setOnItemClickListener(this);
 	}
 	
+	/**
+	 * Initializes the FileListView <br>
+	 * - sets the root path. If null it will be the root of the sdcard <br>
+	 * - sets the default extentions if no customs are present <br>
+	 * - updates the UI <br>
+	 * <br>
+	 * Call this method at the end of the onCreate()-Methode.
+	 * 
+	 * @param path root directory
+	 */
 	public void init(File path) {
 		
 		if(path != null) {
@@ -64,15 +74,30 @@ public class FileListView extends ListView implements AdapterView.OnItemClickLis
 		
 		updateUI(adapter.getPath());
 	}
+	
+	/**
+	 * Initializes the FileListView <br>
+	 * - sets the root path to the root of the sdcard <br>
+	 * - sets the default extentions if no customs are present <br>
+	 * - updates the UI <br>
+	 * <br>
+	 * Call this method at the end of the onCreate()-Methode.
+	 * 
+	 * @param path root directory
+	 */
+	public void init() {
+		init(null);
+	}
 
 	public FileSystemAdapter getAdapter() {
 		return adapter;
 	}
 	
 	public void setDefaultFileExtentions() {
+		adapter.addExtention("folder", R.drawable.folder);
+		adapter.addExtention("file", R.drawable.file);
 		adapter.addExtention("jpg", R.drawable.image);
 		adapter.addExtention("zip", R.drawable.packed);
-		
 	}
 
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
