@@ -16,7 +16,7 @@ import android.view.Menu;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends Activity {
+public class FilebrowserActivity extends Activity {
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,6 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 
 		FileListView fileList = (FileListView) findViewById(R.id.fileListView);
-		fileList.setDefaultFileExtentions();
 		fileList.setOnDirectoryOrFileClickListener(new FileListView.OnDirectoryOrFileClickListener() {
 			public void onDirectoryOrFileClick(File file) {
 				System.out.println(file);
@@ -44,8 +43,8 @@ public class MainActivity extends Activity {
 		EditText editTextFile = (EditText) findViewById(R.id.editTextFile);
 		fileList.setEditTextFile(editTextFile);
 
-		File externalFilesDir = getExternalFilesDir(null);
-		fileList.init(null);
+//		File externalFilesDir = getExternalFilesDir(null);
+		fileList.init();
 	}
 
 	@Override
@@ -74,6 +73,5 @@ public class MainActivity extends Activity {
 			}
 		}
 	}
-
 	
 }
