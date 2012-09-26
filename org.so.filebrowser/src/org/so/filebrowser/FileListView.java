@@ -70,8 +70,9 @@ public class FileListView extends ListView implements AdapterView.OnItemClickLis
 	}
 	
 	public void setDefaultFileExtentions() {
-		adapter.addExtention("jpg", R.drawable.icon_image);
-		adapter.addExtention("zip", R.drawable.archive);
+		adapter.addExtention("jpg", R.drawable.image);
+		adapter.addExtention("zip", R.drawable.packed);
+		
 	}
 
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
