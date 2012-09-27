@@ -49,6 +49,15 @@ public class FileListView extends ListView implements AdapterView.OnItemClickLis
 	}
 	
 	/**
+	 * Resource id of the row.<br>
+	 * The row must contain a TextView with the id textFileName and an ImageView with the id imageFileType.
+	 * @param rowViewResourceId
+	 */
+	public void setRowView(int rowViewResourceId) {
+		adapter.mResource = rowViewResourceId;
+	}
+	
+	/**
 	 * Initializes the FileListView <br>
 	 * - sets the root path. If null it will be the root of the sdcard <br>
 	 * - sets the default extentions if no customs are present <br>
@@ -186,5 +195,8 @@ public class FileListView extends ListView implements AdapterView.OnItemClickLis
 		this.comparator = comparator;
 	}
 	
+	public void setOnGetView(FileSystemAdapter.OnGetView onGetView) {
+		adapter.setOnGetView(onGetView);
+	}
 }
 

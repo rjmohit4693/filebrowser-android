@@ -18,6 +18,8 @@ import android.widget.TextView;
 
 /**
  * 
+ * 
+ * 
  * @author strangeoptics
  *
  */
@@ -28,9 +30,10 @@ public class FileSystemAdapter extends ArrayAdapter<FileData> {
 	private File path;
 	private File file;
 	private Map<String, Integer> mapExtentions = new HashMap<String, Integer>();
+	private OnGetView onGetView;
 	
-	public FileSystemAdapter(Context context, int textViewResourceId) {
-		super(context, textViewResourceId, new ArrayList<FileData>());
+	public FileSystemAdapter(Context context, int rowViewResourceId) {
+		super(context, rowViewResourceId, new ArrayList<FileData>());
 		//   /mnt/sdcard
 		root = Environment.getExternalStorageDirectory().getPath();
 		path = new File(root + "/");
@@ -57,6 +60,7 @@ public class FileSystemAdapter extends ArrayAdapter<FileData> {
                   "ArrayAdapter requires the resource ID to be a TextView", e);
         }
         
+        
         FileData item = getItem(position);
         textView.setText((CharSequence)item.name);
         
@@ -71,6 +75,10 @@ public class FileSystemAdapter extends ArrayAdapter<FileData> {
         	} else {
         		imageView.setImageResource(mapExtentions.get("file"));
         	}
+        }
+        
+        if(onGetView != null) {
+        	onGetView.onGetView(position, convertView, parent, item);
         }
         
         return view;
@@ -100,7 +108,7 @@ public class FileSystemAdapter extends ArrayAdapter<FileData> {
 		File[] files = path.listFiles();
 
 		if (!path.getAbsolutePath().equals(root)) {
-			items.add(new FileData("../", true));
+			items.add(new FileData(null, "../", true));
 		}
 
 		for (int i = 0; i < files.length; i++) {
@@ -108,9 +116,9 @@ public class FileSystemAdapter extends ArrayAdapter<FileData> {
 
 			if (!file.isHidden() && file.canRead()) {
 				if (file.isDirectory()) {
-					items.add(new FileData(file.getName() + "/", true));
+					items.add(new FileData(file, file.getName() + "/", true));
 				} else {
-					items.add(new FileData(file.getName(), false));
+					items.add(new FileData(file, file.getName(), false));
 				}
 			}
 		}
@@ -176,4 +184,19 @@ public class FileSystemAdapter extends ArrayAdapter<FileData> {
 	public void setPath(File path) {
 		this.path = path;
 	}
+	
+	public void setOnGetView(OnGetView onGetView) {
+		this.onGetView = onGetView;
+	}
+	
+	/**
+     * Interface definition for a callback to be invoked when the getView()-Method of the Adapter is called.
+     */
+    public interface OnGetView {
+
+        /**
+         * Callback method to be invoked when the getView()-Method of the Adapter is called.
+         */
+        void onGetView(int position, View convertView, ViewGroup paren, FileData item);
+    }
 }
