@@ -25,7 +25,7 @@ public class FilebrowserActivity extends Activity {
 		StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 		StrictMode.setThreadPolicy(policy);
 
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.standard_filebrowser);
 
 		FileListView fileList = (FileListView) findViewById(R.id.fileListView);
 		fileList.setOnDirectoryOrFileClickListener(new FileListView.OnDirectoryOrFileClickListener() {
