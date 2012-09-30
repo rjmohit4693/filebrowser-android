@@ -3,5 +3,7 @@
     <string name="app_name">de.so.filebrowser</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_main">filebrowser-android</string>
+    <string name="button_standard">show filebrowser (standard)</string>
+    <string name="button_custom">show filebrowser (custom)</string>
 
 </resources>
