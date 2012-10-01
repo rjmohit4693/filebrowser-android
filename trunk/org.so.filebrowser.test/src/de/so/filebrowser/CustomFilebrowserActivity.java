@@ -32,10 +32,14 @@ public class CustomFilebrowserActivity extends Activity {
 		fileList.setOnGetView(new FileSystemAdapter.OnGetView() {
 			@Override
 			public void onGetView(int position, View convertView, ViewGroup paren, FileData item) {
-				if(convertView != null && !item.directory) {
+				if(convertView != null) {
 					TextView textViewSize = (TextView) convertView.findViewById(R.id.textSize);
-					textViewSize.setText(Long.toString(item.file.length()));
-				}
+					if(!item.directory) {
+						textViewSize.setText(Long.toString(item.file.length()));
+					} else {
+						textViewSize.setText("");
+					}
+				} 
 			}
 		});
 		
